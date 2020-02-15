@@ -1,0 +1,17 @@
+[10-May-2012 00:51:23] PHP Parse error:  syntax error, unexpected '}' in /home/airsofte/public_html/forum/includes/template.php(230) : eval()'d code on line 64
+[10-May-2012 00:51:32] PHP Parse error:  syntax error, unexpected '}' in /home/airsofte/public_html/forum/cache/tpl_absolution_ucp_register.html.php on line 64
+[05-Jun-2012 10:55:29] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 10:55:42] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 13:06:20] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 13:06:54] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 13:07:12] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 13:07:26] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:04:27] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:04:36] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:04:38] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:04:39] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:04:42] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:04:58] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:05:00] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:05:31] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316
+[05-Jun-2012 15:05:33] PHP Fatal error:  Call to undefined function  get_max_forum_thanks() in /home/airsofte/public_html/forum/includes/functions_display.php on line 316

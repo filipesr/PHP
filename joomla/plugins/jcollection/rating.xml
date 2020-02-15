@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.5.2" type="plugin" group="jcollection"
+	method="upgrade">
+	<name>JCollection - Rating</name>
+	<author>Thorsten Riess</author>
+	<authorEmail>thorsten.riess@sh-riess.de
+	</authorEmail>
+	<authorUrl>http://www.thorsten-riess.de
+	</authorUrl>
+	<creationDate>2009/05/27</creationDate>
+	<copyright>(c) 2009 by Thorsten Riess. All rights reserved.
+	</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html
+		GNU/GPL</license>
+	<version>0.9.2</version>
+	<description>Rating plugin for JCollection</description>
+	<files>
+		<filename plugin="rating">rating.php</filename>
+	</files>
+	<params>
+		<param name="show_fieldset" type="radio" default="0" label="Show fieldset"
+			description="Show fieldset bordering the vote">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_item" type="radio" default="1" label="Show item rating"
+			description="Show item rating (in addition/instead of to info set rating)">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_info" type="radio" default="1" label="Show info set rating"
+			description="Show info set rating (in addition/instead of to item rating)">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_review" type="radio" default="1" label="Show review rating"
+			description="Show review rating">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_useful" type="radio" default="0" label="Show review useful"
+			description="Show review useful">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+	</params>
+</install>

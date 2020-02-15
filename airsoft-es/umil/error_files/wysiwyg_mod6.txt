@@ -1,0 +1,11 @@
+WYSIWYG Editor Mod
+PHP Version: 5.2.3
+DBMS: MySQL 5.0.45-community-nt-log
+phpBB3 Version: 3.0.5
+
+Removing acp module: overview
+ERROR: Module does not exist.
+
+Removing acp module: General Settings
+Unable to remove module, it has assigned children. Please remove or move all children before performing this action.
+

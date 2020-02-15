@@ -1,0 +1,75 @@
+2012-09-21 2:23:51 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 2:23:51 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 2:46:30 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 2:46:30 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 2:52:59 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 2:52:59 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 2:53:39 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 2:53:39 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 2:56:28 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 2:56:28 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:28:23 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:28:23 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:30:20 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:30:20 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:30:26 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:30:26 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:36:21 - PHP Warning:  require_once(D:\wamp\www\finotraco.com.br\loja1\catalog\controller\product\product.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: Permission denied in D:\wamp\www\finotraco.com.br\loja1\system\engine\front.php on line 35
+2012-09-21 3:36:24 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:36:24 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:37:13 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:37:13 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:37:56 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:37:56 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:38:08 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:38:08 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:39:09 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:39:09 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:39:57 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:39:57 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 3:54:39 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 3:54:39 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 12:19:31 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 12:19:31 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 12:20:00 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 12:20:00 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 12:26:47 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 12:26:47 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 14:17:25 - PHP Notice:  Undefined variable: review_status in D:\wamp\www\finotraco.com.br\loja1\admin\view\template\common\header.tpl on line 85
+2012-09-21 14:17:55 - PHP Notice:  Undefined variable: review_status in D:\wamp\www\finotraco.com.br\loja1\admin\view\template\common\header.tpl on line 85
+2012-09-21 14:18:34 - PHP Notice:  Undefined variable: review_status in D:\wamp\www\finotraco.com.br\loja1\admin\view\template\common\header.tpl on line 85
+2012-09-21 14:21:33 - PHP Notice:  Undefined variable: review_status in D:\wamp\www\finotraco.com.br\loja1\admin\view\template\common\header.tpl on line 85
+2012-09-21 14:22:05 - PHP Notice:  Undefined variable: review_status in D:\wamp\www\finotraco.com.br\loja1\admin\view\template\common\header.tpl on line 85
+2012-09-21 14:43:56 - PHP Notice:  Undefined index: manufacturer_id in D:\wamp\www\finotraco.com.br\loja1\admin\model\catalog\product.php on line 113
+2012-09-21 14:50:22 - PHP Warning:  mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\wamp\www\finotraco.com.br\loja1\system\library\mail.php on line 150
+2012-09-21 14:50:38 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 14:50:38 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 14:51:07 - PagSeguro: [HTTP 401] - UNAUTHORIZED
+
+2012-09-21 14:54:46 - PHP Warning:  mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\wamp\www\finotraco.com.br\loja1\system\library\mail.php on line 150
+2012-09-21 16:12:22 - PHP Warning:  mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\wamp\www\finotraco.com.br\loja1\system\library\mail.php on line 150
+2012-09-21 16:18:56 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 16:18:56 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 16:24:53 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 16:24:53 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 16:24:59 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 16:24:59 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 16:25:54 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 16:25:54 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 16:25:59 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 16:25:59 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-21 16:35:51 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-21 16:35:51 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-25 13:04:43 - PHP Notice:  Undefined index: manufacturer_id in D:\wamp\www\finotraco.com.br\loja1\admin\model\catalog\product.php on line 113
+2012-09-25 13:05:11 - PHP Notice:  Undefined index: manufacturer_id in D:\wamp\www\finotraco.com.br\loja1\admin\model\catalog\product.php on line 113
+2012-09-26 18:26:14 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(0,10)' at line 1<br />Error No: 1064<br />SELECT * FROM category c LEFT JOIN category_description cd ON (c.category_id = cd.category_id) LEFT JOIN category_to_store c2s ON (c.category_id = c2s.category_id) WHERE c.parent_id = '0' AND cd.language_id = '2' AND c2s.store_id = '0'  AND c.status = '1' ORDER BY RAND(), c.sort_order, LCASE(cd.name) LIMIT(0,10) in D:\wamp\www\finotraco.com.br\loja1\system\database\mysql.php on line 49
+2012-09-26 19:12:50 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.sort_order, LCASE(cd.name)' at line 1<br />Error No: 1064<br />SELECT * FROM category c LEFT JOIN category_description cd ON (c.category_id = cd.category_id) LEFT JOIN category_to_store c2s ON (c.category_id = c2s.category_id) WHERE c.parent_id = '75' AND cd.language_id = '2' AND c2s.store_id = '0'  AND c.status = '1' ORDER c.sort_order, LCASE(cd.name) in D:\wamp\www\finotraco.com.br\loja1\system\database\mysql.php on line 49
+2012-09-26 19:13:04 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.sort_order, LCASE(cd.name)' at line 1<br />Error No: 1064<br />SELECT * FROM category c LEFT JOIN category_description cd ON (c.category_id = cd.category_id) LEFT JOIN category_to_store c2s ON (c.category_id = c2s.category_id) WHERE c.parent_id = '75' AND cd.language_id = '2' AND c2s.store_id = '0'  AND c.status = '1' ORDER  c.sort_order, LCASE(cd.name)  in D:\wamp\www\finotraco.com.br\loja1\system\database\mysql.php on line 49
+2012-09-26 19:13:32 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.sort_order, LCASE(cd.name)' at line 1<br />Error No: 1064<br />SELECT * FROM category c LEFT JOIN category_description cd ON (c.category_id = cd.category_id) LEFT JOIN category_to_store c2s ON (c.category_id = c2s.category_id) WHERE c.parent_id = '75' AND cd.language_id = '2' AND c2s.store_id = '0'  AND c.status = '1' ORDER c.sort_order, LCASE(cd.name) in D:\wamp\www\finotraco.com.br\loja1\system\database\mysql.php on line 49
+2012-09-26 19:16:27 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-26 19:16:27 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-27 15:55:14 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-27 15:55:14 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-27 15:56:10 - PHP Notice:  Undefined variable: current_url in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 299
+2012-09-27 15:56:10 - PHP Notice:  Undefined variable: app_id in D:\wamp\www\finotraco.com.br\loja1\catalog\view\theme\default\template\product\product.tpl on line 315
+2012-09-28 11:55:31 - PHP Warning:  mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\wamp\www\finotraco.com.br\loja1\system\library\mail.php on line 150

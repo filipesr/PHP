@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="jquery,ui,easy,easyui,web">
+	<meta name="description" content="easyui help you build your web page easily!">
+	<title>Parcial eleitoral</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
+	<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.edatagrid.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#dgVotos').edatagrid({
+				url: '_select_votos.php?idEleicao=1'
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Eleições PIBAVENI</h2>
+	
+	<table id="dgVotos" title="Votos" style="width:700px;height:400px"
+			toolbar="#toolbar" pagination="false" idField="idCedula"
+			rownumbers="false" fitColumns="true" singleSelect="true">
+		<thead>
+			<tr>
+				<th field="dcargo" width="50">Cargo</th>
+				<th field="nome" width="50">Nome</th>
+				<th field="qtde" width="50">Votos</th>
+			</tr>
+		</thead>
+	</table>	
+
+	<div id="toolbar">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:$('#dg').edatagrid('addRow')">Novo</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:$('#dg').edatagrid('destroyRow')">Excluir</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="javascript:$('#dg').edatagrid('saveRow')">Salvar</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#dg').edatagrid('cancelRow')">Cancelar</a>
+	</div>
+</body>
+</html>

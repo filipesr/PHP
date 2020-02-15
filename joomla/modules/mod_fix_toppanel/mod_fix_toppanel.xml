@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Fix TopPanel</name>
+	<author>Andrea S. - joomlovers.net</author>
+	<creationDate>2008</creationDate>
+  <license>Creative Commons GPL2</license>
+	<authorEmail>info@joomlovers.net</authorEmail>
+	<authorUrl>www.joomlovers.net</authorUrl>
+	<version>1.2</version>
+	<description>Fix TopPanel show a fixed toppanel with inside text or a module position. Created bt Andrea S. of www.joomlovers.net - Hide/Show Script by Justin Barlow | http://www.netlobo.com</description>
+  <files>
+    <filename module="mod_fix_toppanel">mod_fix_toppanel.php</filename>
+	<filename>helper.php</filename>
+	<filename>index.html</filename>
+	<filename>tmpl/default.php</filename>
+	<filename>tmpl/index.html</filename>
+	<filename>js/jb.js</filename>
+	<filename>js/fixed.js</filename>
+  </files>
+  <params>
+	<param name="content" type="textarea" cols="48" rows="10" default="{loadposition user9}" label="Content" description="You can use text, html or load a module position with {loadposition user9}"/>
+	<param name="bgcolor" type="text" default="#4A4A4A" label="Background Color" />
+	<param name="txtcolor" type="text" default="#ECECEC" label="Text Color" />
+	<param name="linkcolor" type="text" default="#ECECEC" label="Link Color" />
+  <param name="show" type="radio" default="1" label="Show open/close text?" description="Do you want show the hide/show text?" >
+	  <option value='1'>Yes</option>
+	  <option value='2'>No</option>
+  </param>  
+	<param name="shtext" type="text" default="Show - Hide" label="Text for Show and Hide button" />
+	<param name="bttcolor" type="text" default="#ECECEC" label="Button Text Color" />
+  </params>
+</install>

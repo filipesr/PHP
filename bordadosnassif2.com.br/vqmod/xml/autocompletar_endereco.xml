@@ -1,0 +1,174 @@
+<modification>
+	<id>Auto Completar Endereço</id>
+	<version>1.5.x</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jeann e-mail: jeann@surgimento.com.br twiter: @surgimento site: http://www.surgimento.com.br/</author>
+	<file name="catalog/model/localisation/zone.php">
+		<operation error="skip">
+			<search position="before" ><![CDATA[
+                public function getZone($zone_id) {
+			]]></search>
+			<add><![CDATA[
+			public function getZonesByEstado($estado) {
+				if (strlen($estado)<=2) {
+					$query = $this->db->query("SELECT zone_id FROM " . DB_PREFIX . "zone WHERE country_id = '30' AND code = '".$estado."' AND status = '1' ORDER BY name");
+					$zone_id = $query->row["zone_id"];
+				}else{
+					$zone_id = "";
+				}
+				return $zone_id;
+			}
+			]]></add>
+		</operation>    
+	</file>
+    <file name="catalog/controller/account/register.php">
+		<operation error="skip">
+			<search position="before" ><![CDATA[
+                public function zone() {
+			]]></search>
+			<add><![CDATA[
+			public function estado_autocompletar() {
+				$this->load->model('localisation/zone');
+				$code = $this->model_localisation_zone->getZonesByEstado($this->request->get['estado']);
+				if ($code <> "") {
+					$output = '<option value="' . $code . '" selected="selected"> '.$this->request->get['estado'].'</option>';
+				}else{
+					$output = "";
+				}
+				$this->response->setOutput($output);
+			} 
+			]]></add>
+		</operation>    
+	</file>    
+     
+	<file name="catalog/view/theme/*/template/account/register.tpl">
+		<operation error="skip">
+			<search position="after" ><![CDATA[
+                <?php echo $header; ?>
+			]]></search>
+			<add><![CDATA[
+			<script>
+			$(function(){
+				$('input[name="address_1"]').parent().parent().hide();
+				$('input[name="address_2"]').parent().parent().hide();
+				$('input[name="city"]').parent().parent().hide();
+				
+				$('input[name="postcode"]').blur(function(){
+					$('input[name="address_1"]').parent().parent().fadeIn('slow');
+					$('input[name="address_2"]').parent().parent().fadeIn('slow');
+					$('input[name="city"]').parent().parent().fadeIn('slow');
+					cep = $.trim($('input[name="postcode"]').val().replace('-', ''));
+					$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+cep, function(){
+						if(resultadoCEP["resultado"] == "1"){
+							$('input[name="address_1"]').val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
+							$('input[name="address_2"]').val(unescape(resultadoCEP["bairro"]));
+							$('input[name="city"]').val(unescape(resultadoCEP["cidade"]));
+							$('select[name=\'zone_id\']').load('index.php?route=account/register/estado_autocompletar&estado='+unescape(resultadoCEP["uf"]));			
+						}else{
+							alert("Endereço do cep não encontrado. Digite o endereço manualmente!");
+						}
+					});
+				});
+			});	
+			</script>
+			]]></add>
+		</operation>    
+	</file>  
+	
+	
+	
+	
+	
+
+    <file name="catalog/controller/checkout/register.php">
+		<operation error="skip">
+			<search position="before" ><![CDATA[
+                public function zone() {
+			]]></search>
+			<add><![CDATA[
+			public function estado_autocompletar() {
+				$this->load->model('localisation/zone');
+				$code = $this->model_localisation_zone->getZonesByEstado($this->request->get['estado']);
+				if ($code <> "") {
+					$output = '<option value="' . $code . '" selected="selected"> '.$this->request->get['estado'].'</option>';
+				}else{
+					$output = "";
+				}
+				$this->response->setOutput($output);
+			} 
+			]]></add>
+		</operation>    
+	</file>    
+     
+	<file name="catalog/view/theme/*/template/checkout/register.tpl">
+		<operation error="skip">
+			<search position="top" ><![CDATA[
+			]]></search>
+			<add><![CDATA[
+			<script>
+			$(function(){					
+				$('input[name="postcode"]').blur(function(){
+					cep = $.trim($('input[name="postcode"]').val().replace('-', ''));
+					$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+cep, function(){
+						if(resultadoCEP["resultado"] == "1"){
+							$('input[name="address_1"]').val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
+							$('input[name="address_2"]').val(unescape(resultadoCEP["bairro"]));
+							$('input[name="city"]').val(unescape(resultadoCEP["cidade"]));						$('select[name=\'zone_id\']').load('index.php?route=account/register/estado_autocompletar&estado='+unescape(resultadoCEP["uf"]));			
+						}else{
+							alert("Endereço do cep não encontrado. Digite o endereço manualmente!");
+						}
+					});
+				});
+			});	
+			</script>
+			]]></add>
+		</operation>    
+	</file>  
+	
+	
+	 <file name="catalog/controller/checkout/guest.php">
+		<operation error="skip">
+			<search position="before" ><![CDATA[
+                public function zone() {
+			]]></search>
+			<add><![CDATA[
+			public function estado_autocompletar() {
+				$this->load->model('localisation/zone');
+				$code = $this->model_localisation_zone->getZonesByEstado($this->request->get['estado']);
+				if ($code <> "") {
+					$output = '<option value="' . $code . '" selected="selected"> '.$this->request->get['estado'].'</option>';
+				}else{
+					$output = "";
+				}
+				$this->response->setOutput($output);
+			} 
+			]]></add>
+		</operation>    
+	</file>    
+     
+	<file name="catalog/view/theme/*/template/checkout/guest.tpl">
+		<operation error="skip">
+			<search position="top" ><![CDATA[
+			]]></search>
+			<add><![CDATA[
+			<script>
+			$(function(){					
+				$('input[name="postcode"]').blur(function(){
+					cep = $.trim($('input[name="postcode"]').val().replace('-', ''));
+					$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+cep, function(){
+						if(resultadoCEP["resultado"] == "1"){
+							$('input[name="address_1"]').val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
+							$('input[name="address_2"]').val(unescape(resultadoCEP["bairro"]));
+							$('input[name="city"]').val(unescape(resultadoCEP["cidade"]));						$('select[name=\'zone_id\']').load('index.php?route=account/register/estado_autocompletar&estado='+unescape(resultadoCEP["uf"]));			
+						}else{
+							alert("Endereço do cep não encontrado. Digite o endereço manualmente!");
+						}
+					});
+				});
+			});	
+			</script>
+			]]></add>
+		</operation>    
+	</file>   
+        
+</modification>

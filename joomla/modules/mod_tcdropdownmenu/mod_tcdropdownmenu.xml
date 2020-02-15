@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>TCDropDownMenu</name>
+	<author>Tobacamp-Dani Gunawan</author>
+	<creationDate>August 2008</creationDate>
+	<copyright>Copyright (C) 2008 dvTeam.net. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tobacamp@gmail.com</authorEmail>
+	<authorUrl>www.tobacamp.com</authorUrl>
+	<version>1.0.2</version>
+	<description>Displays a dropdown menu. Only one level menu. Note: some templates may cause this module doesn't work well. If it happens, please consider to change your template or edit CSS. Thank you.</description>
+	<files>
+		<filename module="mod_tcdropdownmenu">mod_tcdropdownmenu.php</filename>
+	</files>
+	<params>
+		<param name="menutype" type="mos_menu" default="" label="Menu Name" description="The name of the menu (default is mainmenu)" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="separator" type="text" default="" size="3" label="Separator" description="Menu separator" />
+		<param name="separatorcolor" type="text" default="#000000" size="10" label="Separator Color" description="Menu separator color" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="a" type="text" default="" size="10" label="A" description="Link color" />
+		<param name="aactive" type="text" default="" size="10" label="A:Active" description="Active link color" />
+		<param name="ahover" type="text" default="" size="10" label="A:Hover" description="Hover link color" />
+		<param name="avisited" type="text" default="" size="10" label="A:Visited" description="Visited link color" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="submenubg" type="text" default="#FFFFFF" size="10" label="Sub-menu Background" description="Sub-menu background color" />
+		<param name="sidebordercolor" type="text" default="#9AC1C9" size="10" label="Side-border Color" description="Sub-menu side border color" />
+		<param name="bottombordercolor" type="text" default="#B9D6DC" size="10" label="Bottom-border Color" description="Sub-menu bottom border color" />
+	</params>
+</install>

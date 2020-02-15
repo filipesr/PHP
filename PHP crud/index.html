@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="jquery,ui,easy,easyui,web">
+	<meta name="description" content="easyui help you build your web page easily!">
+	<title>Build CRUD DataGrid with jQuery EasyUI - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
+	<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.edatagrid.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#dg').edatagrid({
+				url: '_select.php?class=cliente',
+				saveUrl: 'save_cliente.php',
+				updateUrl: 'update_cliente.php',
+				destroyUrl: '_delete.php?class=cliente',
+				destroyMsg:{
+					norecord:{	// when no record is selected
+						title:'Atenção',
+						msg:'Nenhum registro selecionado.'
+					},
+					confirm:{	// when select a row
+						title:'Confirmação',
+						msg:'Você tem certeza que deseja excluir essa linha? (Esta ação não pode ser desfeita!)'
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>CRUD DataGrid</h2>
+	<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div>Double click the row to begin editing.</div>
+	</div>
+	
+	<table id="dg" title="My Users" style="width:700px;height:400px"
+			toolbar="#toolbar" pagination="true" idField="id"
+			rownumbers="true" fitColumns="true" singleSelect="true">
+		<thead>
+			<tr>
+				<th field="nome" width="50" editor="{type:'validatebox',options:{required:true}}">Nome</th>
+				<th field="sobrenome" width="50" editor="{type:'validatebox',options:{required:true}}">Sobrenome</th>
+				<th field="telefone" width="50" editor="text">Telefone</th>
+				<th field="email" width="50" editor="{type:'validatebox',options:{validType:'email'}}">Email</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="toolbar">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:$('#dg').edatagrid('addRow')">Novo</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:$('#dg').edatagrid('destroyRow')">Excluir</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="javascript:$('#dg').edatagrid('saveRow')">Salvar</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#dg').edatagrid('cancelRow')">Cancelar</a>
+	</div>
+	
+</body>
+</html>

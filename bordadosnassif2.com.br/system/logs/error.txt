@@ -1,0 +1,22 @@
+   2012-12-25 22:30:01 - PHP Notice:  Undefined variable: languages in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 55
+2012-12-25 22:30:01 - PHP Notice:  Undefined variable: currencies in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 66
+2012-12-25 22:30:01 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 91
+2012-12-25 22:30:01 - PHP Notice:  Undefined variable: text_items in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 92
+2012-12-25 22:30:01 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 110
+2012-12-25 22:32:21 - PHP Notice:  Undefined variable: currencies in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 55
+2012-12-25 22:32:21 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 80
+2012-12-25 22:32:21 - PHP Notice:  Undefined variable: text_items in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 81
+2012-12-25 22:32:21 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 99
+2012-12-25 22:32:39 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 57
+2012-12-25 22:32:39 - PHP Notice:  Undefined variable: text_items in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 58
+2012-12-25 22:32:39 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 76
+2012-12-25 22:33:23 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 57
+2012-12-25 22:33:23 - PHP Notice:  Undefined variable: text_items in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 58
+2012-12-25 22:33:23 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 84
+2012-12-25 22:34:11 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 57
+2012-12-25 22:34:11 - PHP Notice:  Undefined variable: text_items in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 58
+2012-12-25 22:34:35 - PHP Notice:  Undefined variable: languages in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 55
+2012-12-25 22:34:35 - PHP Notice:  Undefined variable: currencies in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 66
+2012-12-25 22:34:35 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 91
+2012-12-25 22:34:35 - PHP Notice:  Undefined variable: text_items in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 92
+2012-12-25 22:34:35 - PHP Notice:  Undefined variable: text_cart in D:\wamp\www\bordadosnassif2.com.br\catalog\view\theme\vft\template\common\header.tpl on line 110

@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+cifraclub.com.br	TRUE	/	FALSE	1999999999	always	true
+.google.com	TRUE	/	FALSE	1999999999	NID	86=1KMXDoBMvuxHriAK0d54vZ1DyBhWilKt0uSHNjgnnTEQ4rldsQSImBgPRlRD6hDZseiuUut2q9tsOxpmUuR8Ws4LHxGWoI3S8DmbLsvrTA3yWh0HvP0-g8Y1ztLoXluI
+

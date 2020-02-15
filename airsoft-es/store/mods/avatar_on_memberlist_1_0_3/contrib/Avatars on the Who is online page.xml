@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.-->
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD.\nAlthough MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD.\nNo support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
+	<header>
+		<meta name="generator" content="MODX file generated with PP MODX Creator by tumba25 (online version)"/>
+		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
+		<title lang="en"><![CDATA[Avatar on Memberlist]]></title>
+		<description lang="en"><![CDATA[Displays a small thumbnail of users avatars on the viewonline.php page.]]></description>
+		<author-notes lang="en"><![CDATA[This addon was written by chiana, on the bellow topic:
+http://www.phpbb.com/community/viewtopic.php?f=69&t=583545&start=240#p6191005
+I only made the Prosilver instructions.]]></author-notes>
+		<author-group>
+			<author>
+				<realname><![CDATA[Rădulescu Dragoș-Valentin]]></realname>
+				<username><![CDATA[TheKiller]]></username>
+				<homepage><![CDATA[http://www.rising-dead.com/]]></homepage>
+				<email><![CDATA[admin@rising-dead.com]]></email>
+			</author>
+		</author-group>
+		<mod-version>1.0.3</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>180</time>
+			<target-version>3.0.10</target-version>
+		</installation>
+		<link-group>
+			<link type="parent" href="../install_AvatarMemberlist.xml" lang="en">Main Installation</link>
+		</link-group>
+	</header>
+	<action-group>
+		<open src="viewonline.php">
+			<edit>
+				<find><![CDATA[include($phpbb_root_path . 'common.' . $phpEx);]]></find>
+				<action type="after-add"><![CDATA[include($phpbb_root_path . 'includes/functions_display.' . $phpEx);]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[$sql = 'SELECT u.user_id, u.username, u.username_clean, u.user_type, u.user_colour, s.session_id, s.session_time, s.session_page, s.session_ip, s.session_browser, s.session_viewonline, s.session_forum_id]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[s.session_viewonline, s.session_forum_id]]></inline-find>
+					<inline-action type="after-add"><![CDATA[, u.user_avatar, u.user_avatar_type, u.user_avatar_width, u.user_avatar_height]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[		'USER_BROWSER'		=> ($auth->acl_get('a_user')) ? $row['session_browser'] : '',]]></find>
+				<action type="after-add"><![CDATA[		'USER_AVATAR'      => get_user_avatar($row['user_avatar'], $row['user_avatar_type'], $row['user_avatar_width'], $row['user_avatar_height']),
+		'USER_AVATAR_THUMB'   => ($row['user_avatar']) ? get_user_avatar($row['user_avatar'], $row['user_avatar_type'], ($row['user_avatar_width'] > $row['user_avatar_height']) ? 25 : (25 / $row['user_avatar_height']) * $row['user_avatar_width'], ($row['user_avatar_height'] > $row['user_avatar_width']) ? 25 : (25 / $row['user_avatar_width']) * $row['user_avatar_height']) : '',]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/viewonline_body.html">
+			<edit>
+				<find><![CDATA[			<th class="name"><a href="{U_SORT_USERNAME}">{L_USERNAME}</a></th>]]></find>
+				<action type="before-add"><![CDATA[			<th class="memberlist-avatar">&nbsp;</th>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		<tr class="<!-- IF user_row.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">]]></find>
+				<action type="after-add"><![CDATA[			<td class="memberlist-avatar"><a class="thumbnail" href="{user_row.U_VIEW_PROFILE}"><!-- IF user_row.USER_AVATAR --><span>{user_row.USER_AVATAR}</span>{user_row.USER_AVATAR_THUMB}<!-- ELSE --><span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" /></span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" width="25" height="25" /><!-- ENDIF --></a></td>]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/viewonline_body.html">
+			<edit>
+				<find><![CDATA[<table class="tablebg" width="100%" cellspacing="1">
+<tr>]]></find>
+				<action type="after-add"><![CDATA[	<th width="2%" nowrap="nowrap">#</th>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<!-- BEGIN user_row -->
+	<tr>]]></find>
+				<action type="after-add"><![CDATA[	    <td class="row2" align="center"> <a class="thumbnail" href="{user_row.U_USER_PROFILE}"><span>{user_row.USER_AVATAR}</span>{user_row.USER_AVATAR_THUMB}</a></td>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		<td class="row1" colspan="3"><b class="gensmall">{L_LEGEND} :: {LEGEND}</b></td>]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[3]]></inline-find>
+					<inline-action type="replace-with"><![CDATA[4]]></inline-action>
+				</inline-edit>
+			</edit>
+		</open>
+		<diy-instructions lang="en"><![CDATA[Goto: ACP > Styles > template > prosilver > Click: Refresh]]></diy-instructions>
+	</action-group>
+</mod>

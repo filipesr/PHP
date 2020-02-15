@@ -1,0 +1,19 @@
+
+Fresh install:
+==============
+
+1. Download the component com_jcollection-1.0.x.zip.
+2. Download the plugins plg_jcollection_rating-1.0.x.zip and plg_jcollection_listcat-1.0.x.zip.
+3. In the Joomla backend, go to "Extensions-Install/Uninstall", install the component, then the plugins.
+4. Go to "Extensions-Plugin Manager" and publish the JCollection plugins, if you want to use them.
+
+Update:
+=======
+
+Do everything as for a fresh install, do *not* uninstall the old version!
+
+Uninstall:
+==========
+
+In the Joomla backend, go to "Extensions-Install/Uninstall", select "Components" and uninstall JCollection.
+Be aware that everything will be deleted, including all your entries!

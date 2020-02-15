@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<params>
+		<param name="catlayout" type="radio" default="" label="Category layout"
+			description="">
+			<option value="">Use Global</option>
+			<option value="default">default</option>
+			<option value="grid">grid</option>
+		</param>
+		<param name="itemlayout" type="radio" default="" label="Item layout"
+			description="">
+			<option value="">Use Global</option>
+			<option value="default">default</option>
+			<option value="list">list</option>
+		</param>
+		<param name="created_by" type="sql" default="" label="Author"
+			description="DETAILAUTHOR"
+			query="SELECT id AS value,name AS created_by FROM #__users WHERE block = 0 AND gid > 18 ORDER BY name" />
+		<param name="created_by_alias" type="text" size="20" default=""
+			label="Author Alias" description="DETAILAUTHORALIAS" />
+		<param name="access" type="list" size="20" default="0"
+			label="Access Level" description="DETAILACCESS">
+			<option value="0">Public</option>
+			<option value="1">Registered</option>
+			<option value="2">Special</option>
+		</param>
+		<param name="approved" type="list" size="20" default="1" label="Approved">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="published" type="list" size="20" default="1" label="Published">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="date" type="calendar" default="" label="Created Date"
+			description="DETAILCREATED" />
+		<param name="show_reviews" type="list" label="Reviews"
+			description="TIPIFSETTOSHOWREVIEWS">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_toplists" type="radio" default=""
+			label="Show lists before item" description="TIPIFSETTOSHOWTOPLISTS">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_bottomlists" type="radio" default=""
+			label="Show lists after item" description="TIPIFSETTOSHOWBOTTOMLISTS">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_vote" type="list" default=""
+			label="Item Rating/Voting" description="TIPIFSETTOSHOWVOTING">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_useful" type="radio" default="" label="Show review useful"
+			description="Show review useful">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="allow_rating" type="list" size="20" default=""
+			label="Allow rating" description="DETAILALLOWRATING">
+			<option value="">Use Global</option>
+			<option value="0">Public</option>
+			<option value="1">Registered</option>
+			<option value="2">Special</option>
+		</param>
+		<param name="allow_useful" type="list" size="20" default=""
+			label="Allow useful" description="DETAILALLOWUSEFUL">
+			<option value="">Use Global</option>
+			<option value="0">Public</option>
+			<option value="1">Registered</option>
+			<option value="2">Special</option>
+		</param>
+		<param name="showinfosetsas" type="list" default="list" label="Show info sets as" >
+			<option value="">Use Global</option>
+			<option value="lists">lists</option>
+			<option value="tabs">tabs</option>
+			<option value="sliders">sliders</option>
+		</param>
+		<param name="webserviceoverwrite" type="text" size="30" default="" label="Webservice overwrites"
+			description="Comma-separated list of webservices to overwrite the info sets" />
+		<param name="overwrite_cats" type="list" default="" label="Category view item overrrides"
+			description="Use item overrides in category view (this slows down the category view)" >
+			<option value="">Use Global</option>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</form>

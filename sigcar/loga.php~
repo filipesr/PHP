@@ -1,0 +1,51 @@
+<?php
+	session_name("SigCarLogin");
+	session_start();
+
+	include "css/css.php"; // Executa a cláusula SQL
+	include "connection.php"; // Conecta ao banco de dados
+	include "functions.php"; // Banco de funções
+	if($_POST['lnome'] != "") {
+		//Executa a consulta
+		$lnome = $_POST['lnome'];
+		$lsenha = $_POST['lsenha'];
+		$q_user = RetVar("SELECT count(idUser) FROM tuser WHERE Login='$lnome' AND Pass='$lsenha'");
+	
+		if($q_user == 1) {
+			sqlexec($id,"UPDATE tuser SET dtUA = NOW( ) WHERE Login='$lnome' AND Pass='$lsenha'");
+			$_SESSION['login'] =$lnome;
+			$_SESSION['senha'] =$lsenha;
+			$_SESSION['iduser']=RetVar("SELECT idUser FROM tuser WHERE Login='$lnome' AND Pass='$lsenha'");
+			session_register("SigCarLogin");
+			header("Location: ".$home."/cad/testoque.php");
+			exit;
+		} else {
+			header("Location: ".$home."/login.php?login=falhou&causa=".urlencode('Usuário ou Senha Inválidos!'));
+			exit;
+		}
+	}
+	
+	//agora a parte que verifica se o login já foi feito
+	if(!session_is_registered("SigCarLogin")) {
+		header("Location: ".$home."/login.php?login=falhou&causa=".urlencode('Usuário não logado!'));
+	}
+
+	//agora a parte que verifica se tem acesso
+	$oper = $_POST['oper'];
+	$login=$_SESSION['login'];
+	$senha=$_SESSION['senha'];
+	if(RetVar("SELECT idGrupoAcesso FROM tuser WHERE Login='".$_SESSION['login']."' AND Pass='".$_SESSION['senha']."'") != 1) {
+		if ($oper=="") {$oper="Ler";};
+		if($ModuloTab!=""){
+			if(RetVar("select a.a".$oper." from tuser u ,tacesso a ,tmodulo m where u.idGrupoAcesso=a.idGrupoAcesso and a.idModulo=m.idModulo and m.ModuloTab='$ModuloTab' and u.login='$login' and u.pass='$senha' and a.dtValidade > now();")==0) {
+				echo "<div align=center><br><br><br><img src='$home/imagens/Symbol-Stop.jpg'></font></div>"; //se não tem permissão aparece essa mensagem
+				echo "<div align=center><font size=2 face=Verdana, Arial, Helvetica, sans-serif><br><br><br>Você não tem permissão de acessar essa página.</font></div>"; //se não tem permissão aparece essa mensagem
+				echo "<div align=center><font size=2 face=Verdana, Arial, Helvetica, sans-serif><br><br><br><a href='$home/login.php'>Logar com outro usuário.</a></font></div>"; //se não tem permissão aparece essa mensagem
+				echo "<div align=center><font size=2 face=Verdana, Arial, Helvetica, sans-serif><br><br><br><a href=javascript:history.back(1)>Voltar.</a></font></div>"; //se não tem permissão aparece essa mensagem
+				exit;
+			}
+		}
+	}
+	include "include_cab2.php";
+?>
+<script language="JavaScript" src="funcoes.js" type="text/javascript"></script>

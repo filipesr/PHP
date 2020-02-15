@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+.text_a {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #666666;
+} 
+
+.text_b {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #FFFFFF;
+} 
+
+.text_c {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+} 
+
+.text_d {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000000;
+} 
+
+.text_e {
+  font-family: Impact;
+  font-size: 20px;
+  color: #007CC2;
+} 
+
+.text_f {
+  font-family: Impact;
+  font-size: 15px;
+  color: #FF6600;
+} 
+
+.text_g {
+  font-family: Impact;
+  font-size: 15px;
+  color: #007CC2;
+}
+
+.text_h {
+  font-family: Impact;
+  font-size: 13px;
+  color: #FF6600;
+}
+
+.text_tit {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #000000;
+  font-weight: bold;
+} 

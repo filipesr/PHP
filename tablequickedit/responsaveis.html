@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table Quick Edit</title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/font-awesome.css" rel="stylesheet"/>
+  </head>
+  <body onload="viewData()">
+
+    <div class="container" style="margin-top:35px">
+      <h4>Responsáveis</h4>
+      <table id="tabledit" class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Telefone 2</th>
+            <th>CPF</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.tabledit.js"></script>
+    <script>
+    function viewData() {
+      $.ajax({
+        url: 'process.php?classe=responsaveis&p=view',
+        method: 'GET'
+      }).done(function (data) {
+        $('tbody').html(data)
+        tableData()
+      })
+    }
+    function tableData() {
+      $('#tabledit').Tabledit({
+        url: 'process.php',
+        editButton: false,
+        deleteButton: false,
+        hideIdentifier: true,
+        columns: {
+          identifier: [0, 'id'],
+          editable: [[1, 'nome'], 
+            [2, 'telefone'],
+            [3, 'telefone2'],
+            [4, 'cpf'],
+            [5, 'foto']]
+        },
+        onSuccess: function (data, textStatus, jqXHR) {
+          viewData()
+        },
+        onFail: function (jqXHR, textStatus, errorThrown) {
+          console.log('onFail(jqXHR, textStatus, errorThrown)');
+          console.log(jqXHR);
+          console.log(textStatus);
+          console.log(errorThrown);
+        },
+        onAjax: function (action, serialize) {
+          console.log('onAjax(action, serialize)');
+          console.log(action);
+          console.log(serialize);
+        }
+      });
+    }
+    </script>
+  </body>
+</html>

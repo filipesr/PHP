@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+.form01 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  color: #23313E;
+  padding: 0px;
+  height: 19px;
+  width: 90px;
+  border: 1px solid #FFFFFF;
+  cursor: text;
+  background-color: #E4E4E4;
+  height: 19px;
+  width: 90px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.form02 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #23313E;
+  text-decoration: none;
+  padding: 0px;
+  height: 20px;
+  width: 20px;
+  border: 0px;
+  cursor: text;
+  background-color: #FFFFFF;
+  border-style: solid ;
+  border-color: #FFFFFF;
+}
+
+.form03 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  background-color: #DEDEDC;
+  height: 19px;
+  width: 200px;
+  border: 1px solid #FFFFFF;
+}
+
+select { 
+  background-color: #DEDEDC;
+  font:9px verdana, arial, helvetica, sans-serif;
+  color:#003399;
+}
+
+.campoData {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  background-color: #DEDEDC;
+  height: 19px;
+  width: 80px;
+  border: 1px solid #FFFFFF;
+}
+
+.campoCK {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  background-color: #DEDEDC;
+  height: 19px;
+  width: 19px;
+  border: 1px solid #FFFFFF;
+}
+
+.btEdt {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  color: #23313E;
+  padding: 0px;
+  height: 19px;
+  width: 90px;
+  border: 1px solid #FFFFFF;
+  cursor: text;
+  background-color: #E4E4E4;
+  height: 19px;
+  width: 90px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.btExc {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  color: #aa0000;
+  padding: 0px;
+  height: 19px;
+  width: 90px;
+  border: 1px solid #aa0000;
+  cursor: text;
+  background-color: #E4E4E4;
+  height: 19px;
+  width: 90px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.btIns {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  color: #0000aa;
+  padding: 0px;
+  height: 19px;
+  width: 90px;
+  border: 1px solid #0000aa;
+  cursor: text;
+  background-color: #E4E4E4;
+  height: 19px;
+  width: 90px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.tlogin {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: #DEDEDC;
+  height: 16px;
+  width: 160px;
+  border: 1px solid #FFFFFF;
+}
+
+.btPesq {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  color: #00aa00;
+  padding: 0px;
+  height: 19px;
+  width: 90px;
+  border: 1px solid #00aa00;
+  cursor: text;
+  background-color: #E4E4E4;
+  height: 19px;
+  width: 90px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+}

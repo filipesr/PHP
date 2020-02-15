@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+    <name>dancei</name>
+    <version>1.0.0</version>
+	<description>Template desenvolvido com exclusividade para o dancei ponto com ponto br.</description>
+    <creationDate>02/08/08</creationDate>
+    <author>Julio Coutinho</author>
+    <authorEmail>webmaster@joomlabrasilia.org</authorEmail>
+    <authorUrl>http://www.joomlabrasilia.org</authorUrl>
+    <copyright>Copyright 2008 - dancei.com.br</copyright>
+    <license>Dancei All rights reserved</license>
+	<files>
+		<filename>index.php</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>css/template_css.css</filename>
+		<filename>swf/topo.swf</filename>
+		<filename>js/fontes.js</filename>
+		<filename>js/flash.js</filename>		
+		<filename>images/amais_icone.jpg</filename>
+		<filename>images/amenos_icone.jpg</filename>
+		<filename>images/busca_icone.jpg</filename>
+		<filename>images/destaques.jpg</filename>
+		<filename>images/mapa_icone.jpg</filename>
+    </files>
+	<positions>
+		<position>top</position>
+		<position>right</position>
+		<position>depoimento</position>
+		<position>user4</position>
+		<position>breadcrumbs</position>
+		<position>footer</position>		
+	</positions>
+</install>

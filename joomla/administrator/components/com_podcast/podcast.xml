@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>Podcast</name>
+	<creationDate>August 15, 2008</creationDate>
+	<author>Joseph LeBlanc, Dan Li</author>
+	<authorEmail>contact@jlleblanc.com</authorEmail>
+	<copyright>2005 - 2008</copyright>
+	<license>GPL v2</license>
+	<version>1.5</version>
+	<description>A component for managing podcasts.</description>
+	<menu link="option=com_podcast">Podcast Suite</menu>
+	<languages folder="admin/languages">
+		<language tag="en-GB">en-GB.com_podcast.ini</language>
+		<language tag="fr-FR">fr-FR.com_podcast.ini</language>
+	</languages>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>media/index.html</filename>
+		<filename>models/feed.php</filename>
+		<filename>models/index.html</filename>
+		<filename>models/podcast.php</filename>
+		<filename>podcast.php</filename>
+		<filename>views/feed/index.html</filename>
+		<filename>views/feed/metadata.xml</filename>
+		<filename>views/feed/tmpl/default.php</filename>
+		<filename>views/feed/tmpl/index.html</filename>
+		<filename>views/feed/tmpl/sample.php</filename>
+		<filename>views/feed/view.raw.php</filename>
+		<filename>views/index.html</filename>
+	</files>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.mysql.sql</file>
+		</sql>
+	</install>
+	<administration>
+		<menu>Podcast Suite</menu>
+		<submenu>
+			<menu link="option=com_podcast&amp;view=files">Manage Clips</menu>
+			<menu link="option=com_podcast&amp;view=info">Information</menu>
+		</submenu>
+		
+		<languages folder="admin/languages">
+			<language tag="en-GB">en-GB.com_podcast.ini</language>
+			<language tag="fr-FR">fr-FR.com_podcast.ini</language>
+		</languages>
+		<files folder="admin">
+			<filename>alerts.css</filename>
+			<filename>alerts_on.css</filename>
+			<filename>config.xml</filename>
+			<filename>LICENSE</filename>
+			<filename>getid3/extension.cache.dbm.php</filename>
+			<filename>getid3/extension.cache.mysql.php</filename>
+			<filename>getid3/getid3.lib.php</filename>
+			<filename>getid3/getid3.php</filename>
+			<filename>getid3/module.archive.gzip.php</filename>
+			<filename>getid3/module.archive.rar.php</filename>
+			<filename>getid3/module.archive.szip.php</filename>
+			<filename>getid3/module.archive.tar.php</filename>
+			<filename>getid3/module.archive.zip.php</filename>
+			<filename>getid3/module.audio-video.asf.php</filename>
+			<filename>getid3/module.audio-video.bink.php</filename>
+			<filename>getid3/module.audio-video.flv.php</filename>
+			<filename>getid3/module.audio-video.matroska.php</filename>
+			<filename>getid3/module.audio-video.mpeg.php</filename>
+			<filename>getid3/module.audio-video.nsv.php</filename>
+			<filename>getid3/module.audio-video.quicktime.php</filename>
+			<filename>getid3/module.audio-video.real.php</filename>
+			<filename>getid3/module.audio-video.riff.php</filename>
+			<filename>getid3/module.audio-video.swf.php</filename>
+			<filename>getid3/module.audio.aac.php</filename>
+			<filename>getid3/module.audio.ac3.php</filename>
+			<filename>getid3/module.audio.au.php</filename>
+			<filename>getid3/module.audio.avr.php</filename>
+			<filename>getid3/module.audio.bonk.php</filename>
+			<filename>getid3/module.audio.flac.php</filename>
+			<filename>getid3/module.audio.la.php</filename>
+			<filename>getid3/module.audio.lpac.php</filename>
+			<filename>getid3/module.audio.midi.php</filename>
+			<filename>getid3/module.audio.mod.php</filename>
+			<filename>getid3/module.audio.monkey.php</filename>
+			<filename>getid3/module.audio.mp3.php</filename>
+			<filename>getid3/module.audio.mpc.php</filename>
+			<filename>getid3/module.audio.ogg.php</filename>
+			<filename>getid3/module.audio.optimfrog.php</filename>
+			<filename>getid3/module.audio.rkau.php</filename>
+			<filename>getid3/module.audio.shorten.php</filename>
+			<filename>getid3/module.audio.tta.php</filename>
+			<filename>getid3/module.audio.voc.php</filename>
+			<filename>getid3/module.audio.vqf.php</filename>
+			<filename>getid3/module.audio.wavpack.php</filename>
+			<filename>getid3/module.graphic.bmp.php</filename>
+			<filename>getid3/module.graphic.gif.php</filename>
+			<filename>getid3/module.graphic.jpg.php</filename>
+			<filename>getid3/module.graphic.pcd.php</filename>
+			<filename>getid3/module.graphic.png.php</filename>
+			<filename>getid3/module.graphic.svg.php</filename>
+			<filename>getid3/module.graphic.tiff.php</filename>
+			<filename>getid3/module.misc.exe.php</filename>
+			<filename>getid3/module.misc.iso.php</filename>
+			<filename>getid3/module.tag.apetag.php</filename>
+			<filename>getid3/module.tag.id3v1.php</filename>
+			<filename>getid3/module.tag.id3v2.php</filename>
+			<filename>getid3/module.tag.lyrics3.php</filename>
+			<filename>getid3/write.apetag.php</filename>
+			<filename>getid3/write.id3v1.php</filename>
+			<filename>getid3/write.id3v2.php</filename>
+			<filename>getid3/write.lyrics3.php</filename>
+			<filename>getid3/write.metaflac.php</filename>
+			<filename>getid3/write.php</filename>
+			<filename>getid3/write.real.php</filename>
+			<filename>getid3/write.vorbiscomment.php</filename>
+			<filename>index.html</filename>
+			<filename>install.mysql.sql</filename>
+			<filename>models/files.php</filename>
+			<filename>models/index.html</filename>
+			<filename>models/podcast.php</filename>
+			<filename>podcast.php</filename>
+			<filename>tables/index.html</filename>
+			<filename>tables/podcast.php</filename>
+			<filename>views/files/index.html</filename>
+			<filename>views/files/tmpl/default.js</filename>
+			<filename>views/files/tmpl/default.php</filename>
+			<filename>views/files/tmpl/index.html</filename>
+			<filename>views/files/view.html.php</filename>
+			<filename>views/index.html</filename>
+			<filename>views/podcast/index.html</filename>
+			<filename>views/podcast/tmpl/default.js</filename>
+			<filename>views/podcast/tmpl/default.php</filename>
+			<filename>views/podcast/tmpl/default_error.php</filename>
+			<filename>views/podcast/tmpl/default_shownotes.php</filename>
+			<filename>views/podcast/tmpl/index.html</filename>
+			<filename>views/podcast/view.html.php</filename>
+			<filename>views/select/index.html</filename>
+			<filename>views/select/tmpl/default.php</filename>
+			<filename>views/select/tmpl/index.html</filename>
+			<filename>views/select/view.html.php</filename>
+			<filename>views/info/index.html</filename>
+			<filename>views/info/info.css</filename>
+			<filename>views/info/tmpl/default.php</filename>
+			<filename>views/info/tmpl/index.html</filename>
+			<filename>views/info/view.html.php</filename>
+		</files>
+	</administration>
+</install>
+

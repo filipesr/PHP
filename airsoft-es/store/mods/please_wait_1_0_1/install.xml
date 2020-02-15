@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http
+://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+		<title lang="en">Please Wait</title>
+		<description lang="en">Please Wait is adding an onclick event to the posting buttons so the button text will change. Both Private messages, Quickreply and the posting page is affected.</description>
+
+		<author-notes lang="en">
+		</author-notes>
+		<author-group>
+			<author>
+				<realname>Stoker</realname>
+				<username>Stokerpiller</username>
+				<homepage>http://www.phpbb3bcodes.com</homepage>
+			</author>
+		</author-group>
+
+		<mod-version>1.0.1</mod-version>
+
+		<installation>
+			<level>easy</level>
+			<time>400</time>
+			<target-version>3.0.9 </target-version>
+		</installation>			
+
+		<history>
+			<entry>
+				<date>2011-05-19</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change>Final release.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2011-11-19</date>
+				<rev-version>1.0.1</rev-version>
+				<changelog lang="en">
+					<change>Missing code added for attachments</change>
+					<change>Added loader image</change>
+				</changelog>
+			</entry>
+		</history>
+		
+	</header>
+	<action-group>
+		<copy>
+			<file from="root/images/*.*" to="images/*.*" />
+		</copy>
+		<open src="language/en/posting.php">
+			<edit>
+				<find><![CDATA[?>]]></find>
+				<action type="before-add"><![CDATA[//Posting , draft , preview , cancel message... [Please Wait]
+$lang = array_merge($lang, array(
+	'POST_SENDING'					=> 'Sending post - Please wait...',
+	'DRAFT_SENDING'					=> 'Saving post - Please wait...',
+	'LOAD_SENDING'					=> 'Loading post - Please wait...',
+	'PREVIEW_SENDING'				=> 'Loading preview - Please wait...',
+	'PM_POST_SENDING'				=> 'Sending PM - Please wait...',
+	'PM_DRAFT_SENDING'				=> 'Saving PM - Please wait...',
+	'PM_LOAD_SENDING'				=> 'Loading PM  - Please wait...',
+	'PM_PREVIEW_SENDING'			=> 'Loading preview - Please wait...',
+	'AT_FILE_UPLOADING'				=> 'Uploading file - Please wait...',
+));]]></action>
+			</edit>
+		</open>
+		<open src="language/en/viewtopic.php">
+			<edit>
+				<find><![CDATA[?>]]></find>
+				<action type="before-add"><![CDATA[//Posting , draft , preview , cancel message... [Please Wait]
+$lang = array_merge($lang, array(
+	'POST_SENDING'					=> 'Sending Post - Please wait...',
+	'PREVIEW_SENDING'				=> 'Loading Preview - Please wait...',
+	'FULLED_SENDING'				=> 'Loading Full Editor - Please wait...',
+));]]></action>
+			</edit>		
+		</open>			
+		<open src="styles/prosilver/template/posting_editor.html">
+			<edit>
+			<comment lang="en">This will modify the buttons when writing private messages and posts</comment>
+				<find><![CDATA[		<fieldset class="submit-buttons">
+			{S_HIDDEN_ADDRESS_FIELD}
+			{S_HIDDEN_FIELDS}
+			<!-- IF S_HAS_DRAFTS --><input type="submit" accesskey="d" tabindex="8" name="load" value="{L_LOAD_DRAFT}" class="button2" onclick="load_draft = true;" />&nbsp; <!-- ENDIF -->
+			<!-- IF S_SAVE_ALLOWED --><input type="submit" accesskey="k" tabindex="7" name="save" value="{L_SAVE_DRAFT}" class="button2" />&nbsp; <!-- ENDIF -->
+			<input type="submit" tabindex="5" name="preview" value="{L_PREVIEW}" class="button1"<!-- IF not S_PRIVMSGS --> onclick="document.getElementById('postform').action += '#preview';"<!-- ENDIF --> />&nbsp;
+			<input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="button1 default-submit-action" />&nbsp;
+
+		</fieldset>]]></find>
+				<action type="replace-with"><![CDATA[		<fieldset id="buttons" class="submit-buttons">
+			{S_HIDDEN_ADDRESS_FIELD}
+			{S_HIDDEN_FIELDS}
+			<!-- IF S_HAS_DRAFTS --><input type="submit" accesskey="d" tabindex="8" name="load" value="{L_LOAD}" class="button2" onclick="JavaScript:document.getElementById('buttons').style.display='none';document.getElementById('processingload').style.display='block';load_draft = true;" />&nbsp; <!-- ENDIF -->
+			<!-- IF S_SAVE_ALLOWED --><input type="submit" accesskey="k" tabindex="7" name="save" value="{L_SAVE}" onclick="JavaScript:document.getElementById('buttons').style.display='none';document.getElementById('processingsave').style.display='block';" class="button2" />&nbsp; <!-- ENDIF -->
+			<input type="submit" tabindex="5" name="preview" value="{L_PREVIEW}" onclick="JavaScript:document.getElementById('buttons').style.display='none';document.getElementById('processingprev').style.display='block';<!-- IF not S_PRIVMSGS --> document.getElementById('postform').action += '#preview';<!-- ENDIF -->" class="button1" />&nbsp;
+			<input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" onclick="JavaScript:document.getElementById('buttons').style.display='none';document.getElementById('processingsub').style.display='block';" class="button1 default-submit-action" />&nbsp;
+		</fieldset>
+		<fieldset id="processingload" class="submit-buttons" style="display:none;">
+			<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input class="button1" type="button" value="<!-- IF S_IN_UCP -->{L_PM_LOAD_SENDING}<!-- ELSE -->{L_LOAD_SENDING}<!-- ENDIF -->" disabled="disabled" />&nbsp;
+		</fieldset>
+		<fieldset id="processingsave" class="submit-buttons" style="display:none;">
+			<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input class="button1" type="button" value="<!-- IF S_IN_UCP -->{L_PM_DRAFT_SENDING}<!-- ELSE -->{L_DRAFT_SENDING}<!-- ENDIF -->" disabled="disabled" />&nbsp;
+		</fieldset>
+		<fieldset id="processingprev" class="submit-buttons" style="display:none;">
+			<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input class="button1" type="button" value="<!-- IF S_IN_UCP -->{L_PM_PREVIEW_SENDING}<!-- ELSE -->{L_PREVIEW_SENDING}<!-- ENDIF -->" disabled="disabled" />&nbsp;
+		</fieldset>
+		<fieldset id="processingsub" class="submit-buttons" style="display:none;">
+			<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input class="button1" type="button" value="<!-- IF S_IN_UCP -->{L_PM_POST_SENDING}<!-- ELSE -->{L_POST_SENDING}<!-- ENDIF -->" disabled="disabled" />&nbsp;
+		</fieldset>]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/quickreply_editor.html">
+			<edit>
+			<comment lang="en">This will modify the buttons in the quickreply editor.</comment>
+				<find><![CDATA[				<div id="message-box">
+					<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
+				</div>
+				</fieldset>
+				<fieldset class="submit-buttons">
+					{S_FORM_TOKEN}
+					{QR_HIDDEN_FIELDS}
+					<input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="button1" />&nbsp;
+					<input type="submit" accesskey="f" tabindex="7" name="full_editor" value="{L_FULL_EDITOR}" class="button2" />&nbsp;
+				</fieldset>]]></find>
+				<action type="replace-with"><![CDATA[				<div id="message-box">
+					<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
+				</div>
+				<fieldset id="buttons" class="submit-buttons">
+								{S_FORM_TOKEN}
+								{QR_HIDDEN_FIELDS}
+					<input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="button1" onclick="JavaScript:document.getElementById('buttons').style.display='none';document.getElementById('processingsub').style.display='block';" />&nbsp;
+					<input type="submit" tabindex="5" name="preview" value="{L_PREVIEW}" class="button2" onclick="JavaScript:document.getElementById('buttons').style.display='none';document.getElementById('processingpre').style.display='block';document.getElementById('postform').action += '#preview';" />&nbsp;
+					<input type="submit" accesskey="f" tabindex="7" name="full_editor" value="{L_FULL_EDITOR}" class="button2" onclick="JavaScript:document.getElementById('buttons').style.display='none';document.getElementById('processingfed').style.display='block';" />&nbsp;
+				</fieldset>
+				<fieldset id="processingsub" class="submit-buttons" style="display:none;">
+					<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input class="button1" type="button" value="{L_POST_SENDING}" disabled="disabled" />
+				</fieldset>
+				<fieldset id="processingpre" class="submit-buttons" style="display:none;">
+					<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input class="button1" type="button" value="{L_PREVIEW_SENDING}" disabled="disabled" />
+				</fieldset>
+				<fieldset id="processingfed" class="submit-buttons" style="display:none;">
+					<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input class="button1" type="button" value="{L_FULLED_SENDING}" disabled="disabled" />
+				</fieldset>
+				<div id="message-box">
+					<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
+				</div>]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/posting_attach_body.html">
+			<edit>
+			<comment lang="en">This will modify the upload button.</comment>
+				<find><![CDATA[		<dd>
+			<input type="file" name="fileupload" id="fileupload" maxlength="{FILESIZE}" value="" class="inputbox autowidth" /> 
+			<input type="submit" name="add_file" value="{L_ADD_FILE}" class="button2" onclick="upload = true;" />
+		</dd>]]></find>
+				<action type="replace-with"><![CDATA[		<dd id="buttonsatt">
+			<input type="file" name="fileupload" id="fileupload" maxlength="{FILESIZE}" value="" class="inputbox autowidth" /> 
+			<input type="submit" name="add_file" value="{L_ADD_FILE}" class="button2" onclick="JavaScript:document.getElementById('buttonsatt').style.display='none';document.getElementById('processingatt').style.display='block';upload = true;" />
+		</dd>
+		<dd id="processingatt" style="display:none;">
+		<img src="{ROOT_PATH}images/loader.gif" width="16" height="16" alt="" style="margin-bottom:-5px; padding-right:10px;" /> <input type="button" class="button2" value="{L_AT_FILE_UPLOADING}" disabled="disabled" />
+		</dd>]]></action>
+			</edit>
+		</open>
+				<diy-instructions lang="en">Save the edited files, upload them, purge cache and refresh the template</diy-instructions>
+	</action-group>
+</mod>

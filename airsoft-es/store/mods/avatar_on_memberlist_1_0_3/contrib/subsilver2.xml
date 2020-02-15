@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.-->
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD.\nAlthough MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD.\nNo support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
+	<header>
+		<meta name="generator" content="MODX file generated with PP MODX Creator by tumba25 (online version)"/>
+		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
+		<title lang="en"><![CDATA[Avatar on Memberlist]]></title>
+		<description lang="en"><![CDATA[Displays a small thumbnail of users avatars on the memberlist. -- Rolling your mouse over the thumbnail will show the full size avatar.]]></description>
+		<author-notes lang="en"><![CDATA[Comes in both subsilver2 and prosilver flavours.]]></author-notes>
+		<author-group>
+			<author>
+				<realname><![CDATA[David Lewis]]></realname>
+				<username><![CDATA[Highway of Life]]></username>
+				<homepage><![CDATA[http://startrekguide.com]]></homepage>
+				<email><![CDATA[highwayoflife@gmail.com]]></email>
+			</author>
+		</author-group>
+		<mod-version>1.0.2</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>180</time>
+			<target-version>3.0.10</target-version>
+		</installation>
+		<history>
+			<entry>
+				<date>2007-09-09</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated to prosilver version and submitted to MOD DB]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-01-26</date>
+				<rev-version>1.0.1</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated to MODX 1.2.2 specifications by sevenalive]]></change>
+					<change><![CDATA[Change packaging structure]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2011-07-25</date>
+				<rev-version>1.0.2</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Replaced U_VIEWPROFILE With U_VIEW_PROFILE]]></change>
+					<change><![CDATA[Updated to MODX 1.2.5]]></change>
+				</changelog>
+			</entry>
+		</history>
+		<link-group>
+			<link type="parent" href="../install_AvatarMemberlist.xml" lang="en">Main Installation</link>
+		</link-group>
+	</header>
+	<action-group>
+		<copy>
+			<file from="root/styles/subsilver2/theme/memberlist_avatar.css" to="styles/subsilver2/theme/memberlist_avatar.css"/>
+		</copy>
+		<open src="styles/subsilver2/template/memberlist_body.html">
+			<edit>
+				<find><![CDATA[		<td class="gen" align="center">&nbsp;{memberrow.ROW_NUMBER}&nbsp;</td>]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[&nbsp;{memberrow.ROW_NUMBER}&nbsp;]]></inline-find>
+					<inline-action type="replace-with"><![CDATA[<a class="thumbnail" href="{memberrow.U_VIEW_PROFILE}"><span>{memberrow.USER_AVATAR}</span>{memberrow.USER_AVATAR_THUMB}</a>]]></inline-action>
+				</inline-edit>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/theme/stylesheet.css">
+			<edit>
+				<find><![CDATA[*/]]></find>
+				<action type="after-add"><![CDATA[@import url("memberlist_avatar.css");]]></action>
+			</edit>
+		</open>
+	</action-group>
+</mod>

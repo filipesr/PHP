@@ -1,0 +1,195 @@
+	#divNav {
+		background: transparent url(bk-nav.jpg) no-repeat top left;
+		margin: 0;
+		padding: 0;
+		height: 80px;
+		width: 800px;
+	}
+
+	#nav {
+		position: relative;
+		top: 3px;
+		height: 80px;
+		width: 780px;
+	}
+
+	#nav li ul, #nav li ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	#nav a {
+		text-decoration: none;
+		height: 25px;
+	}
+
+	#nav li { /*float the main list items*/
+		margin: 0;
+		float: left;
+		display: block;
+		padding: 0 5px 0 0;
+	}
+
+	#nav li ul {
+		display: none;
+	}
+
+	#nav li ul li a {
+		height: 20px;
+	}
+
+	#nav li.off ul, #nav li.on ul  { /*put the subnav below*/
+		position: absolute;
+		top: 22px;
+		left: 0;
+		padding-top: 0px;
+		background: #d8eefb;
+		height: 20px;
+		width: 780px;
+		padding-left: 5px;
+	}
+
+	#nav li.on ul {
+		background: #d8eefb;
+	}
+
+	#nav li.on ul li.on a {
+		color: #000;
+	}
+
+	#nav li.on:hover ul, #nav li.over ul { /*for ie*/
+		background: #d8eefb;
+	}
+
+	#nav li a {
+		color: #000000;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 25px;
+		display: block;
+		padding: 0;
+	}
+
+	#nav li a:hover {
+		color: #000000;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 25px;
+		display: block;
+		padding: 0;
+	}
+
+	#nav li.on a {
+		color: #e501a7;
+	}
+
+
+	#nav li.on ul a, #nav li.off ul a {
+		border: 0;
+		float: left; /*ie doesn't inherit the float*/
+		color: #e501a7;
+		width: auto;
+		margin-right: 0px;
+	}
+
+	#nav li.on:hover ul a, #nav li.over ul li a { /*for ie - the specificity is necessary*/
+		background: #d8eefb;
+	}
+
+	#nav li.on ul {
+		display: block;
+	}
+
+	#nav li.off:hover ul, #nav li.over ul {
+		display: block;
+		z-index: 6000;
+	}
+
+	#nav li.off a:hover, #nav li.on a:hover { 
+		color: #e501a7;
+	}
+
+	#nav li.off ul li.off a:hover, #nav li.on ul li.off a:hover { 
+		color: #000000;
+	}
+
+	/*do the image replacement*/
+
+	#nav li span {
+		position: absolute;
+		left: -9384px;
+	}
+
+	#liRenaissance a, #liArtNouveau a, #liModern a, #liPostModern a, #liDigital a {
+		display: block;
+		position: relative;
+		height: 26px;
+		background: url(bk-dropdownMap.gif) no-repeat; /*contains all hover states*/
+	}
+
+/*first, put the initial states in place*/
+
+#liRenaissance a {
+	background-position: 0 0;
+}
+
+#liArtNouveau a {
+	background-position: -102px 0;
+}
+
+#liModern a {
+	background-position: -204px 0;
+}
+
+#liPostModern a {
+	background-position: -306px 0;
+}
+
+#liDigital a {
+	background-position: -408px 0;
+}
+
+/*active area - for this demo - the code could be based on a body class, and probably work better.*/
+
+ #liModern.on a {
+ 	background-position: -204px -37px;
+ } /*add selectors for the other li's and background-positions*/
+
+/*hover states*/
+
+#liRenaissance a:hover, #liRenaissance:hover a, #liRenaissance.over a {
+	background-position: 0 -73px;
+}
+
+#liArtNouveau a:hover, #liArtNouveau:hover a, #liArtNouveau.over a {
+	background-position: -102px -73px;
+}
+
+#liModern a:hover, #liModern:hover a, #liModern.over a {
+	background-position: -204px -73px;
+}
+
+#liPostModern a:hover, #liPostModern:hover a, #liPostModern.over a {
+	background-position: -306px -73px;
+}
+
+#liDigital a:hover, #liDigital:hover a, #liDigital.over a {
+	background-position: -408px -73px;
+}
+
+/*subnav formatting*/
+
+#nav li.off ul a, #nav li.on ul a {
+	display: block;
+	background: #d8eefb;
+	color: #e501a7;
+	font-family: arial, verdana, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 20px;
+}		
+
+#nav li.on ul a {
+	background: #d8eefb;
+}
+	

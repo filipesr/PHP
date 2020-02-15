@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bordertop_azul {
+  border-top-color: #007CC2;
+  border-top-style: dashed;
+  border:1px;
+}
+
+.bordertop_branca {
+  border-top-color: #FFFFFF;
+  border-top-style: dashed;
+  border:1px;
+}
+
+.bordervert_cinza {
+  border-right-color: #333333;
+  border-right-style: double;
+  border:1px;
+}

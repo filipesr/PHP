@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<name>JCollection Info Set</name>
+	<params>
+		<param name="show_vote" type="list" default=""
+			label="Item Rating/Voting" description="TIPIFSETTOSHOWVOTING">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="info1overwrite" type="text" default="" label="Overwrites for info #1"
+			description="Info #1 overwrite" />
+		<param name="info2overwrite" type="text" default="" label="Overwrites for info #2"
+			description="Info #2 overwrite" />
+		<param name="info3overwrite" type="text" default="" label="Overwrites for info #3"
+			description="Info #3 overwrite" />
+		<param name="info4overwrite" type="text" default="" label="Overwrites for info #4"
+			description="Info #4 overwrite" />
+		<param name="info5overwrite" type="text" default="" label="Overwrites for info #5"
+			description="Info #5 overwrite" />
+		<param name="info6overwrite" type="text" default="" label="Overwrites for info #6"
+			description="Info #6 overwrite" />
+		<param name="info7overwrite" type="text" default="" label="Overwrites for info #7"
+			description="Info #7 overwrite" />
+		<param name="info8overwrite" type="text" default="" label="Overwrites for info #8"
+			description="Info #8 overwrite" />
+		<param name="info9overwrite" type="text" default="" label="Overwrites for info #9"
+			description="Info #9 overwrite" />
+		<param name="info10overwrite" type="text" default="" label="Overwrites for info #10"
+			description="Info #10 overwrite" />
+		<param name="titleoverwrite" type="text" default="" label="Overwrites for info title"
+			description="Info title overwrite" />
+		<param name="descriptionoverwrite" type="text" default="" label="Overwrites for info description"
+			description="Info description overwrite" />
+		<param name="imgoverwrite" type="text" default="" label="Overwrites for info image"
+			description="Info image overwrite" />
+		<param name="urloverwrite" type="text" default="" label="Overwrites for info URL"
+			description="Info URL overwrite" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="Amazon">
+		<param name="amazonitem" type="amazonitem" default="" label="Select ASIN"
+			description="An Amazon ASIN" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="Google">
+		<param name="googlebookitem" type="googlebookitem" default=""
+			label="Select Google book item" description="A Google book item" />
+		<param name="googlemapitem" type="googlemapitem" default=""
+			label="Select Google map position" description="A Google map position" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="Wikipedia">
+		<param name="wikipediaitem" type="wikipediaitem" default=""
+			label="Select Wikipedia item" description="A Wikipedia item" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="ISBNdb">
+		<param name="isbndbitem" type="isbndbitem" default=""
+			label="Select ISBNdb item" description="An ISBNdb item" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="imdb">
+		<param name="imdbitem" type="imdbitem" default=""
+			label="Select imdb item" description="An imdb item" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="Yahoo">
+		<param name="yahoomapitem" type="yahoomapitem" default=""
+			label="Select Yahoo map position" description="A Yahoo map position" />
+		<param name="yahooitem" type="yahooitem" default=""
+			label="Select Yahoo product" description="A Yahoo product" />
+		<param name="yahoomusicitem" type="yahoomusicitem" default=""
+			label="Select Yahoo music item" description="A Yahoo music item" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="EBay">
+		<param name="ebayitem" type="ebayitem" default=""
+			label="Select EBay product" description="An EBay product" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="Lastfm">
+		<param name="lastfmitem" type="lastfmitem" default=""
+			label="Select last.fm album" description="A last.fm album" />
+	</params>
+	<params addpath="/administrator/components/com_jcollection/elements"
+		group="Zanox">
+		<param name="zanoxitem" type="zanoxitem" default=""
+			label="Select Zanox product" description="A Zanox product" />
+	</params>
+</form>

@@ -1,0 +1,11 @@
+Assunto: Notificação Nova imagem - "{ALBUM_NAME}"
+
+Olá {USERNAME},
+
+Você está recebendo esta notificação porque você está assistindo o álbum, "{ALBUM_NAME}" em "{SITENAME}". Este álbum recebeu uma nova imagem desde sua última visita, "{IMAGE_NAME}". Você pode usar o seguinte link para ver o álbum.
+
+{U_ALBUM}
+
+Se você não quiser mais assistir a este álbum você pode clicar no botão "Subscribe álbum" link encontrado no link acima.
+
+{EMAIL_SIG}

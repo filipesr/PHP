@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.-->
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD.\nAlthough MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD.\nNo support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
+	<header>
+		<meta name="generator" content="MODX file generated with PP MODX Creator by tumba25 (online version)"/>
+		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
+		<title lang="en"><![CDATA[Avatar on Memberlist]]></title>
+		<description lang="en"><![CDATA[Displays a small thumbnail of users avatars on the memberlist. -- Rolling your mouse over the thumbnail will show the full size avatar.]]></description>
+		<author-group>
+			<author>
+				<realname><![CDATA[Rădulescu Dragoș-Valentin]]></realname>
+				<username><![CDATA[TheKiller]]></username>
+				<homepage><![CDATA[http://www.rising-dead.com/]]></homepage>
+				<email><![CDATA[admin@rising-dead.com]]></email>
+			</author>
+			<author>
+				<realname><![CDATA[David Lewis]]></realname>
+				<username><![CDATA[Highway of Life]]></username>
+				<homepage><![CDATA[http://www.startrekguide.com/]]></homepage>
+				<email><![CDATA[highwayoflife@gmail.com]]></email>
+			</author>
+		</author-group>
+		<mod-version>1.0.3</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>360</time>
+			<target-version>3.0.10</target-version>
+		</installation>
+		<history>
+			<entry>
+				<date>2007-09-09</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated to prosilver version and submitted to MOD DB]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-01-26</date>
+				<rev-version>1.0.1</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated to MODX 1.2.2 specifications by sevenalive]]></change>
+					<change><![CDATA[Change packaging structure]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2011-07-03</date>
+				<rev-version>1.0.2</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Fixed two errors from the prosilver edits, and one from the subsilver edits. Also updated to MODX 1.2.5.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-01-03</date>
+				<rev-version>1.0.3</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Added Default No Avatar. Thanks to Sniper_E.]]></change>
+					<change><![CDATA[Added Instructions on Adding Avatars on The Team Page (memberlist_leaders.html)]]></change>
+					<change><![CDATA[Fixed colspan value inside <!-- IF S_VIEWONLINE --> So it will look right, if there are no users in groups.]]></change>
+					<change><![CDATA[Fixed avatar width in Internet Explorer 6 and 7]]></change>
+					<change><![CDATA[Added MOD Version on memberlist.]]></change>
+				</changelog>
+			</entry>
+		</history>
+		<link-group>
+			<link type="template" href="./contrib/subsilver2.xml" lang="en">subsilver2</link>
+			<link type="contrib" href="./contrib/Avatars on the team page.xml" lang="en">Avatars on The team page</link>
+			<link type="contrib" href="./contrib/Avatars on the Who is online page.xml" lang="en">Avatars on The Who is online page</link>
+			<link type="contrib" href="./contrib/1.0.1 to 1.0.2.xml" lang="en">Upgrade 1.0.1 to 1.0.2</link>
+			<link type="contrib" href="./contrib/1.0.2 to 1.0.3.xml" lang="en">Upgrade 1.0.2 to 1.0.3</link>
+		</link-group>
+	</header>
+	<action-group>
+		<copy>
+			<file from="root/styles/prosilver/theme/memberlist_avatar.css" to="styles/prosilver/theme/memberlist_avatar.css"/>
+		</copy>
+		<open src="memberlist.php">
+			<edit>
+				<find><![CDATA[	return array(]]></find>
+				<action type="after-add"><![CDATA[		'USER_AVATAR'		=> get_user_avatar($data['user_avatar'], $data['user_avatar_type'], $data['user_avatar_width'], $data['user_avatar_height']),
+		'USER_AVATAR_THUMB'	=> ($data['user_avatar']) ? get_user_avatar($data['user_avatar'], $data['user_avatar_type'], ($data['user_avatar_width'] > $data['user_avatar_height']) ? 25 : (25 / $data['user_avatar_height']) * $data['user_avatar_width'], ($data['user_avatar_height'] > $data['user_avatar_width']) ? 25 : (25 / $data['user_avatar_width']) * $data['user_avatar_height']) : '',]]></action>
+			</edit>
+		</open>
+		<open src="language/en/memberlist.php">
+			<edit>
+				<find><![CDATA[?>]]></find>
+				<action type="before-add"><![CDATA[$lang = array_merge($lang, array(
+	'AVATAR_OM_CREDITS'		=> 'Powered by <strong><a href="http://www.rising-dead.com/">Avatar on Memberlist 1.0.3</a></strong>',
+));]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/memberlist_body.html">
+			<edit>
+				<find><![CDATA[		<table class="table1" cellspacing="1" id="memberlist">
+		<thead>
+		<tr>]]></find>
+				<action type="after-add"><![CDATA[			<th class="memberlist-avatar">&nbsp;</th>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					<td colspan="<!-- IF U_SORT_ACTIVE -->5<!-- ELSE -->4<!-- ENDIF -->">&nbsp;</td>]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[5<!-- ELSE -->4]]></inline-find>
+					<inline-action type="replace-with"><![CDATA[6<!-- ELSE -->5]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[	<!-- IF not S_LEADERS_SET -->]]></find>
+				<action type="after-add"><![CDATA[		<th class="memberlist-avatar">&nbsp;</th>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	<!-- ELSEIF S_SHOW_GROUP -->]]></find>
+				<action type="after-add"><![CDATA[		<th class="memberlist-avatar">&nbsp;</th>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	<tr class="<!-- IF memberrow.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">]]></find>
+				<action type="after-add"><![CDATA[		<td class="memberlist-avatar"><a class="thumbnail" href="{memberrow.U_VIEW_PROFILE}"><!-- IF memberrow.USER_AVATAR --><span>{memberrow.USER_AVATAR}</span>{memberrow.USER_AVATAR_THUMB}<!-- ELSE --><span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" /></span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" width="25" height="25" /><!-- ENDIF --></a></td>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<td colspan="<!-- IF S_VIEWONLINE -->5<!-- ELSE -->4<!-- ENDIF -->">{L_NO_MEMBERS}</td>]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[5<!-- ELSE -->4]]></inline-find>
+					<inline-action type="replace-with"><![CDATA[6<!-- ELSE -->5]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[	<li class="rightside pagination">{TOTAL_USERS} &bull; <!-- IF PAGINATION --><a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE -->{PAGE_NUMBER}<!-- ENDIF --></li>]]></find>
+				<action type="before-add"><![CDATA[	<li class="leftside">{L_AVATAR_OM_CREDITS}</li>]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/theme/stylesheet.css">
+			<edit>
+				<find><![CDATA[@import url("colours.css");]]></find>
+				<action type="after-add"><![CDATA[@import url("memberlist_avatar.css");]]></action>
+			</edit>
+		</open>
+		<diy-instructions lang="en"><![CDATA[If your changes do not show up immediately, navigate to ACP > Styles > themes > prosilver > Click: Refresh]]></diy-instructions>
+	</action-group>
+</mod>

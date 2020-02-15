@@ -1,0 +1,59 @@
+<modification>
+    <id>Best-Byte Social Float</id>
+      <version>1.0</version>
+		   <vqmver>2.1.4</vqmver>
+       <author>www.best-byte.com</author>		
+	   <file name="catalog/view/theme/*/template/common/header.tpl">
+    <operation>
+			<search position="before"><![CDATA[</head>]]></search>
+			<add><![CDATA[
+<script type="text/javascript" src="catalog/view/javascript/social-float/jquery.social.share.1.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function($){
+
+	$('#social-share').dcSocialShare({
+		location: 'top',
+		align: 'right',
+		offsetLocation: 160,
+		offsetAlign: 30,
+		width: 70,
+		speedContent: 600,
+		speedFloat: 1600,
+		loadOpen: false,
+		tabText: '<img src="catalog/view/javascript/social-float/tab_share.png" alt="Please Share" />',
+		buttons: 'facebook,twitter,plusone,linkedin,digg,stumbleupon,pinit'
+	});
+});
+</script>
+<style type="text/css">
+.dc-social-float .tab {  
+  cursor: pointer;
+  height: 38px;
+  margin-left: -1px;
+}
+.dc-social-float .dc-social-float-content {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+  -webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px; 
+	-khtml-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;  
+}
+.dcssb-btn {
+  margin-bottom: 5px;
+}
+</style>
+   ]]></add>
+	</operation>
+</file>		
+<file name="catalog/view/theme/*/template/common/footer.tpl">
+    <operation>
+			<search position="before"><![CDATA[</body>]]></search>
+			<add><![CDATA[
+<div id="social-share"></div>
+      ]]></add>
+	</operation>
+</file>		
+</modification>

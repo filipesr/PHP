@@ -1,0 +1,12 @@
+2012-10-28 9:39:59 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 118
+2012-10-28 9:39:59 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 121
+2012-10-28 9:39:59 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 122
+2012-10-28 9:39:59 - PHP Notice:  Error: Could not load language ! in /home/corearte/public_html/system/library/language.php on line 39
+2012-10-28 9:40:37 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 118
+2012-10-28 9:40:37 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 121
+2012-10-28 9:40:37 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 122
+2012-10-28 9:40:37 - PHP Notice:  Error: Could not load language ! in /home/corearte/public_html/system/library/language.php on line 39
+2012-10-28 9:40:47 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 118
+2012-10-28 9:40:47 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 121
+2012-10-28 9:40:47 - PHP Notice:  Undefined index: en in /home/corearte/public_html/admin/index.php on line 122
+2012-10-28 9:40:47 - PHP Notice:  Error: Could not load language ! in /home/corearte/public_html/system/library/language.php on line 39

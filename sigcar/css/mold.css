@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.top_a {
+  background-image: url(../imagens/mold/top001_a.jpg);
+  background-repeat: no-repeat;
+}
+
+.top_b {
+  background-image: url(../imagens/mold/top001_b.jpg);
+  background-repeat: repeat-x;
+}
+
+.top_c {
+  background-image: url(../imagens/mold/top001_c.jpg);
+  background-repeat: no-repeat;
+}
+
+.bar001_a {
+  background-image: url(../imagens/mold/barr001_a.jpg);
+  background-repeat: no-repeat;
+}
+
+.bar001_b {
+  background-image: url(../imagens/mold/barr001_b.jpg);
+  background-repeat: no-repeat;
+}
+
+.bar001_c {
+  background-image: url(../imagens/mold/barr001_c.jpg);
+  background-repeat: no-repeat;
+}
+
+
+
+.barr001_a {
+  background-image: url(../imagens/mold/barr002_a.jpg);
+  background-repeat: repeat-x;
+}
+
+.barr001_b {
+  background-image: url(../imagens/mold/barr002_b.jpg);
+  background-repeat: no-repeat;
+}

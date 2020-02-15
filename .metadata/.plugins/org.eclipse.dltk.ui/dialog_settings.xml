@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="org.eclipse.dltk.ui.lastextsource"/>
+	<item value="480,510" key="UserLibraryLoadSaveDialog.size"/>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
+	</section>
+	<section name="BuildpathContainerSelectionPage">
+		<item value="0" key="index"/>
+	</section>
+</section>

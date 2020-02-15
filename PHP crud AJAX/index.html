@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="crud <<tabela>>">
+	<meta name="description" content="Crud gerado pela ferramenta web4web - by FSrezende.com.br">
+	<title><<tabela_capitalize>></title>
+	<link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<style type="text/css">
+		#fm{
+			margin:0;
+			padding:10px 30px;
+		}
+		.ftitle{
+			font-size:14px;
+			font-weight:bold;
+			color:#666;
+			padding:5px 0;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+		.fitem{
+			margin-bottom:5px;
+		}
+		.fitem label{
+			display:inline-block;
+			width:80px;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript">
+		var url;
+		function newUser(){
+			$('#dlg').dialog('open').dialog('setTitle','Novo Cliente');
+			$('#fm').form('clear');
+			url = 'salvar_cadastroclientes.php';
+		}
+		function editUser(){
+			var row = $('#dg').datagrid('getSelected');
+			if (row){
+				$('#dlg').dialog('open').dialog('setTitle','Editar Cliente');
+				$('#fm').form('load',row);
+				url = 'atualizar_cadastroclientes.php?id='+row.id;
+			}
+		}
+		function saveUser(){
+			$('#fm').form('submit',{
+				url: url,
+					onSubmit: function(){
+					return $(this).form('validate');
+				},
+				success: function(result){
+					var result = eval('('+result+')');
+					if (result.success){
+						$('#dlg').dialog('close');		// close the dialog
+						$('#dg').datagrid('reload');	// reload the user data
+					} else {
+						$.messager.show({
+							title: 'Erro',
+							msg: result.msg
+						});
+					}
+				}
+			});
+		}
+		function removeUser(){
+			var row = $('#dg').datagrid('getSelected');
+			if (row){
+				$.messager.confirm('Confirm','Tem certeza que deseja remover o Cliente?',function(r){
+					if (r){
+						$.post('remover_cadastroclientes.php',{id:row.id},function(result){
+							if (result.success){
+								$('#dg').datagrid('reload');	// reload the user data
+							} else {
+								$.messager.show({	// show error message
+									title: 'Error',
+									msg: result.msg
+								});
+							}
+						},'json');
+					}
+				});
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2><<tabela>></h2>
+	<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div>Clique na opção desejada na barra de ferramentas.</div>
+	</div>
+	
+	<table id="dg" title="Cadastro de Clientes" class="easyui-datagrid" style="width:700px;height:400px"
+			url="pegar_cadastroclientes.php"
+			toolbar="#toolbar" pagination="true"
+			rownumbers="true" fitColumns="true" singleSelect="true">
+		<thead>
+			<tr>
+				<th field="nome" width="50">Nome</th>
+				<th field="sobrenome" width="50">Sobre Nome</th>
+				<th field="telefone" width="50">Telefone</th>
+				<th field="email" width="50">E-mail</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="toolbar">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()" title="Adicionar Cliente">Novo Cliente</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()" title="Alterar Dados do Cliente">Editar Cliente</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeUser()" title="Remover Dados do Cliente">Remover Cliente</a>
+	</div>
+	
+	<div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+			closed="true" buttons="#dlg-buttons">
+		<div class="ftitle">Dados do Cliente</div>
+		<form id="fm" method="post" novalidate>
+			<div class="fitem">
+				<label>Nome:</label>
+				<input name="nome" class="easyui-validatebox" required="true">
+			</div>
+			<div class="fitem">
+				<label>Sobre Nome:</label>
+				<input name="sobrenome" class="easyui-validatebox" required="true">
+			</div>
+			<div class="fitem">
+				<label>Telefone:</label>
+				<input name="telefone">
+			</div>
+			<div class="fitem">
+				<label>E-mail:</label>
+				<input name="email" class="easyui-validatebox" validType="email">
+			</div>
+		</form>
+	</div>
+	<div id="dlg-buttons">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()">Salvar</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancelar</a>
+	</div>
+</body>
+</html>

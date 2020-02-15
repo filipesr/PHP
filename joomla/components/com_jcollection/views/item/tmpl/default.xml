@@ -1,0 +1,17 @@
+<metadata>
+	<state>
+		<url addpath="/administrator/components/com_jcollection/elements">
+			<param name="id" type="item" default="0" label="Select Item" description="A JCollection item" />
+		</url>
+		<params>
+			<param name="showinfosetsas" type="list" default="list" label="Show info sets as" >
+				<option value="lists">lists</option>
+				<option value="tabs">tabs</option>
+				<option value="sliders">sliders</option>
+			</param>
+		</params>
+		<advanced>
+			<param />
+		</advanced>
+	</state>
+</metadata>

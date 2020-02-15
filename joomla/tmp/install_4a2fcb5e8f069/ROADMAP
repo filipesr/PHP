@@ -1,0 +1,43 @@
+Before the first release:
+
+- working categories/item views
+- localisation
+- mootools integration
+- clean css layout
+- help system
+
+++: done
++: mostly done
+.: half-way done
+-: little done
+--: to do 
+
+General:
+- Source cleanup (.)
+- Documentation (.)
+- Help (.)
+
+Backend:
+- Global configuration (++)
+- Item management (++)
+- Category management (++)
+- Review management (+)
+- List management (+)
+- Types management (+)
+- Webservice types management (+)
+- Webservice integration (Amazon, Google book, Wikipedia, ISBNdb, imdb, ...) (+)
+- Data import (-)
+- Data export (-)
+- l10n/i18n (-)
+
+Frontend:
+- Category views (list (.)/grid (--)) (-)
+- Item view(s) (including Webservice information (+)/reviews (+)/involved lists (++)) (.)
+- List view (+)
+- Item editor (.)
+- Review editor (--)
+- List editor (--)
+- Ratings (++)
+- CSS utilization (--)
+- l10n/i18n (-)
+- mootools integration (AJAX) (--)

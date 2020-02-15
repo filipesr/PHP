@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="jquery,ui,easy,easyui,web">
+	<meta name="description" content="easyui help you build your web page easily!">
+	<title>Parcial eleitoral</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
+	<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.edatagrid.js"></script>
+	<script type="text/javascript">
+		function novoVoto(){
+			$('#dlg').dialog('open').dialog('setTitle','Novo Voto');
+			$('#fm').form('clear');
+			url = '_insert_voto.php?idEleicao=1';
+		}
+		$(function(){
+			$('#dgVotos').edatagrid({
+				url: '_select_votos.php?idEleicao=1'
+			});
+			novoVoto();
+		});
+	</script>
+</head>
+<body>
+	<h2>Eleições PIBAVENI</h2>
+	
+	<table id="dgVotos" title="Votos" style="width:700px;height:400px"
+			toolbar="#toolbar" pagination="false" idField="idCedula"
+			rownumbers="false" fitColumns="true" singleSelect="true">
+		<thead>
+			<tr>
+				<th field="dcargo" width="50">Cargo</th>
+				<th field="nome" width="50">Nome</th>
+				<th field="qtde" width="50">Votos</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="dlg" class="easyui-dialog" style="width:850px;height:250px;padding:10px 20px"
+			closed="true" buttons="#dlg-buttons">
+		<div class="ftitle">Voto</div>
+		<form id="fm" method="post" novalidate>
+			<div class="fitem">
+				<label>Numero da Cédula:</label>
+				<input name="nome" class="easyui-validatebox" required="true">
+			</div>
+			<div class="fitem">
+				<label>Vice Presidentes:</label>
+				<input id="idVice1" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=1'">
+					e
+				<input id="idVice2" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=1'">
+			</div>
+			<div class="fitem">
+				<label>Secretarios:</label>
+				<input id="idSec1" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=2'">
+					e
+				<input id="idSec2" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=2'">
+			</div>
+			<div class="fitem">
+				<label>Tesoureiros:</label>
+				<input id="idTes1" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=3'">
+					e
+				<input id="idTes2" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=3'">
+			</div>
+			<div class="fitem">
+				<label>Exame de Contas:</label>
+				<input id="idExa1" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=4'">
+					e
+				<input id="idExa2" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=4'">
+					e
+				<input id="idExa3" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=4'">
+					e
+				<input id="idExa4" class="easyui-combobox" data-options="
+					valueField: 'valor',
+					textField: 'texto',
+					url: '_select_combo_candidato.php?idCargo=4'">
+			</div>
+			
+		</form>
+	</div>
+	<div id="dlg-buttons">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()">Salvar</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancelar</a>
+	</div>
+	
+</body>
+</html>

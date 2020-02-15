@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+org.eclipse.php.core.taskCaseSensitive=enabled
+org.eclipse.php.core.taskPriorities=NORMAL,HIGH,NORMAL,NORMAL
+org.eclipse.php.core.taskTags=TODO,FIXME,XXX,@todo
+pdt.structure.version=14
+pdt_validator/org.eclipse.php.internal.core.compiler.ast.parser.PHPProblemIdentifier/CannotInstantiateType/severity=WARNING
+pdt_validator/org.eclipse.php.internal.core.compiler.ast.parser.PHPProblemIdentifier/ImportNotFound/severity=WARNING
+pdt_validator/org.eclipse.php.internal.core.compiler.ast.parser.PHPProblemIdentifier/UndefinedType/severity=WARNING
+phpVersion=php7.0

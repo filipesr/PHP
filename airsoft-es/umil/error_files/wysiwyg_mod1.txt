@@ -1,0 +1,8 @@
+WYSIWYG Editor Mod
+PHP Version: 5.2.3
+DBMS: MySQL 5.0.45-community-nt-log
+phpBB3 Version: 3.0.5
+
+Remove bbcode row into the phpbb_bbcodes table.
+SQL ERROR You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM phpbb_bbcodes WHERE bbcode_tag = 'video'' at line 1
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server>
+	<Port name="HTTP/1.1" protocol="HTTP">8385</Port>
+<PathMapping local="/SpazioBambini/css" module="SpazioBambini" remote="D:\Algoritimos\PHP\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\htdocs\SpazioBambini"/><PathMapping local="/SpazioBambini/js" module="SpazioBambini" remote="D:\Algoritimos\PHP\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\htdocs\SpazioBambini"/></Server>

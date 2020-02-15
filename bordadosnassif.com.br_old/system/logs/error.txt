@@ -1,0 +1,17 @@
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/module/link in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\module\slideshow.tpl on line 5
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/module/image in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\module\slideshow.tpl on line 6
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/module/link in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\module\slideshow.tpl on line 5
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/module/image in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\module\slideshow.tpl on line 6
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\header.tpl on line 21
+2012-11-13 1:48:13 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\header.tpl on line 81
+2012-11-13 1:49:33 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:49:33 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:49:33 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:49:33 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:49:33 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\footer.tpl on line 9
+2012-11-13 1:49:33 - PHP Notice:  Undefined index: ../../../bordadosnassif/template/common/href in D:\wamp\www\bordadosnassif.com.br\catalog\view\theme\bordadosnassif\template\common\header.tpl on line 81

@@ -1,0 +1,39 @@
+/**
+ * @package styles
+ * @version memberlist_avatar.css 1.0.3 2012-01-03 04:49:51Z TheKiller $
+ * @copyright (c) 2012 Radulescu Dragos-Valentin (TheKiller) - http://www.rising-dead.com/
+ * @copyright (c) 2007 David Lewis (Highway of Life) - http://www.startrekguide.com
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ ---------------------------------------- */
+.thumbnail {
+	z-index: 0;
+	position:relative;
+}
+
+a.thumbnail:hover {
+	background-color: transparent;
+	z-index: 50;
+}
+
+.thumbnail span {
+	position: absolute;
+	background: #E0E5E9 url("./images/cellpic1.gif") repeat-x;
+	padding: 4px;
+	border: 1px solid #A9B8C2;
+	left: 0px;
+	display: none;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.thumbnail span img {
+	border-width: 0;
+	padding: 2px;
+}
+
+a.thumbnail:hover span {
+	position:absolute;
+	display:block;
+	top: 20px;
+	left: 7px;
+}

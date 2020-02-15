@@ -1,0 +1,3 @@
+[09-May-2012 21:13:39] PHP Fatal error:  Call to a member function set_file() on a non-object in /home/airsofte/public_html/forum/includes/mod_parser.php on line 56
+[09-May-2012 21:15:06] PHP Fatal error:  Call to a member function set_file() on a non-object in /home/airsofte/public_html/forum/includes/mod_parser.php on line 56
+[09-May-2012 22:06:51] PHP Fatal error:  Call to a member function set_file() on a non-object in /home/airsofte/public_html/forum/includes/mod_parser.php on line 56

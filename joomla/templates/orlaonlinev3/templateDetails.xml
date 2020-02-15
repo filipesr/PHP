@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+	<name>orlaonlinev3</name>
+	<version>1.0.0</version>
+	<creationDate>06/06/09</creationDate>
+	<author>Filipe Rezende</author>
+	<authorEmail>fsr.trabalho@gmail.com</authorEmail>
+	<authorUrl>http://www.orlaonline.com.br</authorUrl>
+	<copyright></copyright>
+	<license>GNU/GPL</license>
+	<description>Orla Online.</description>
+<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>params.ini</filename>
+		<filename>images/menubkg.gif</filename>
+		<filename>images/logo.gif</filename>
+		<filename>images/spacer.gif</filename>
+	</files>
+	<positions>
+		<position>logo</position>
+		<position>bannersuper</position>
+		<position>menutopo</position>
+		<position>procura</position>
+		<position>colesq</position>
+		<position>colmid</position>
+		<position>coldir</position>
+		<position>bannerfull</position>
+		<position>bot</position>
+		<position>bannersuperfoot</position>
+		<position>direitos</position>
+	</positions>
+</install>

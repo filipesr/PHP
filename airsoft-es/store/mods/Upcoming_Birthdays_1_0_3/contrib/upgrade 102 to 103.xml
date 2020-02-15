@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.3.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+		<title lang="en">Upcoming Birthday list - Upgrade 1.0.2 to 1.0.3</title>
+		<description lang="en">Shows upcoming birthdays on index page, number of days can be modified via ACP.</description>
+		<author-notes lang="en">If you want to cache the queries, open the includes/functions_upcbirthdays.php file and find the following (twice): //delete the above line and uncomment below line if you want to cache the query for an hour </author-notes>
+		<author-group>
+			<author>
+				<realname>Heiko Carstens</realname>
+				<email>lefty@lefty74.com</email>
+				<username>lefty74</username>
+				<homepage>http://www.lefty74.com</homepage>
+			</author>
+		</author-group>
+		<mod-version>1.0.3</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>110</time>
+			<target-version>3.0.6</target-version>
+		</installation>
+		<history>
+			<entry>
+				<date>2007-09-08</date>
+				<rev-version>0.0.1</rev-version>
+				<changelog lang="en">
+					<change>Initial release</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-09-10</date>
+				<rev-version>0.0.1a</rev-version>
+				<changelog lang="en">
+					<change>small bugfix</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-09-14</date>
+				<rev-version>0.0.1b</rev-version>
+				<changelog lang="en">
+					<change>fixed bug, thanks to joebart72 for pointing me in the right direction</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-01-24</date>
+				<rev-version>0.1.0</rev-version>
+				<changelog lang="en">
+					<change>fixed a few bugs, included primehalo's code to make this compatible with his mod, sorting of upcoming birthdays</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-01-26</date>
+				<rev-version>0.1.0</rev-version>
+				<changelog lang="en">
+					<change>fixed a small bug in the include files</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-02-02</date>
+				<rev-version>0.1.1</rev-version>
+				<changelog lang="en">
+					<change>fixed a small bug in the display of the date</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-03-01</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change>repackaged for RC and MODDB and fixed a small bug for those who have the Prime Birthday mod installed</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-03-12</date>
+				<rev-version>1.0.0a</rev-version>
+				<changelog lang="en">
+					<change>made little code changes after MOD denial</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-06-23</date>
+				<rev-version>1.0.1</rev-version>
+				<changelog lang="en">
+					<change>made further code changes after MOD denial</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-03-29</date>
+				<rev-version>1.0.2</rev-version>
+				<changelog lang="en">
+					<change>fixed bug in functions_upcbirthdays that occurs when "today" is the day DSL came into effect</change>
+					<change>took out code for prime birthday mod, rather do that separately then include in mod</change>
+					<change>used list instead of substr to get days and months</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-11-24</date>
+				<rev-version>1.0.3</rev-version>
+				<changelog lang="en">
+					<change>changed mktime to take into account deprecation of is_dst</change>
+				</changelog>
+			</entry>
+		</history>
+	</header>
+	<action-group>
+		<copy>
+			<file from="root/includes/functions_upcbirthdays.php" to="includes/functions_upcbirthdays.php"/>
+		</copy>
+		<open src="index.php">
+			<edit>
+				<find>include_once($phpbb_root_path . 'includes/functions_upcbirthdays.' . $phpEx);</find>
+				<action type="replace-with">include($phpbb_root_path . 'includes/functions_upcbirthdays.' . $phpEx);</action>
+			</edit>
+		</open>
+		<diy-instructions lang="en">don't forget to purge the cache and refresh the templates</diy-instructions>
+	</action-group>
+</mod>

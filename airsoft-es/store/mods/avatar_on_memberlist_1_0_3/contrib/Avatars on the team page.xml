@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.-->
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD.\nAlthough MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD.\nNo support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
+	<header>
+		<meta name="generator" content="MODX file generated with PP MODX Creator by tumba25 (online version)"/>
+		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
+		<title lang="en"><![CDATA[Avatar on Memberlist]]></title>
+		<description lang="en"><![CDATA[Displays a small thumbnail of users avatars on the memberlist_leaders.html page
+Rolling your mouse over the thumbnail will show the full size avatar.]]></description>
+		<author-notes lang="en"><![CDATA[.
+Many Thanks To rxu for helping me over with the PHP Code and IF Statements over IRC.]]></author-notes>
+		<author-group>
+			<author>
+				<realname><![CDATA[Rădulescu Dragoș-Valentin]]></realname>
+				<username><![CDATA[TheKiller]]></username>
+				<homepage><![CDATA[http://www.rising-dead.com/]]></homepage>
+				<email><![CDATA[admin@rising-dead.com]]></email>
+			</author>
+		</author-group>
+		<mod-version>1.0.3</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>180</time>
+			<target-version>3.0.10</target-version>
+		</installation>
+		<link-group>
+			<link type="template" href="../install_AvatarMemberlist.xml" lang="en">Main Installation</link>
+		</link-group>
+	</header>
+	<action-group>
+		<open src="memberlist.php">
+			<edit>
+				<find><![CDATA['SELECT'	=> 'u.user_id, u.group_id as default_group, u.username, u.username_clean, u.user_colour, u.user_rank, u.user_posts, u.user_allow_pm, g.group_id, g.group_name, g.group_colour, g.group_type, ug.user_id as ug_user_id',]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[ug_user_id]]></inline-find>
+					<inline-action type="after-add"><![CDATA[, u.user_avatar, u.user_avatar_type, u.user_avatar_width, u.user_avatar_height',]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[			$template->assign_block_vars($which_row, array(]]></find>
+				<action type="after-add"><![CDATA[				'USER_AVATAR'	=> get_user_avatar($row['user_avatar'], $row['user_avatar_type'], $row['user_avatar_width'], $row['user_avatar_height']),
+				'USER_AVATAR_THUMB'	=> ($row['user_avatar']) ? get_user_avatar($row['user_avatar'], $row['user_avatar_type'], ($row['user_avatar_width'] > $row['user_avatar_height']) ? 25 : (25 / $row['user_avatar_height']) * $row['user_avatar_width'], ($row['user_avatar_height'] > $row['user_avatar_width']) ? 25 : (25 / $row['user_avatar_width']) * $row['user_avatar_height']) : '',]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/memberlist_leaders.html">
+			<edit>
+				<find><![CDATA[		<th class="name"><span class="rank-img">{L_RANK}&nbsp;</span>{L_ADMINISTRATORS}</th>]]></find>
+				<action type="before-add"><![CDATA[		<!-- IF .admin --><th class="memberlist-avatar">&nbsp;</th><!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	<tr class="<!-- IF admin.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">]]></find>
+				<action type="after-add"><![CDATA[		<!-- IF .admin --><td><a class="thumbnail" href="{admin.U_VIEW_PROFILE}"><!-- IF admin.USER_AVATAR --><span>{admin.USER_AVATAR}</span>{admin.USER_AVATAR_THUMB}<!-- ELSE --><span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" /></span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" width="25" height="25" /><!-- ENDIF --></a></td><!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		<th class="name">{L_MODERATORS}</th>]]></find>
+				<action type="before-add"><![CDATA[		<!-- IF .mod --><th class="memberlist-avatar">&nbsp;</th><!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	<tr class="<!-- IF mod.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">]]></find>
+				<action type="after-add"><![CDATA[<!-- IF .mod --><td><a class="thumbnail" href="{mod.U_VIEW_PROFILE}"><!-- IF mod.USER_AVATAR --><span>{admin.USER_AVATAR}</span>{admin.USER_AVATAR_THUMB}<!-- ELSE --><span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" /></span><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="{USER_AVATAR}" width="25" height="25" /><!-- ENDIF --></a></td><!-- ENDIF -->]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/memberlist_leaders.html">
+			<edit>
+				<find><![CDATA[<table class="tablebg" width="100%" cellspacing="1">
+<tr>]]></find>
+				<action type="after-add"><![CDATA[	<th nowrap="nowrap" width="2%" >#</th>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<td colspan="5"><b class="gensmall">{L_ADMINISTRATORS}</b></td>]]></find>
+				<action type="replace-with"><![CDATA[<td colspan="6"><b class="gensmall">{L_ADMINISTRATORS}</b></td>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	<td class="gen" align="center"><strong>{admin.USERNAME_FULL}</strong></td>]]></find>
+				<inline-edit>
+					<inline-action type="before-add"><![CDATA[	<td class="row2" align="center"><a class="thumbnail" href="{admin.U_USER_PROFILE}"><span>{admin.USER_AVATAR}</span>{admin.USER_AVATAR_THUMB}</a></td>]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[<td class="row1" colspan="5" align="center"><span class="gen">{L_NO_ADMINISTRATORS}</span></td>]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[colspan="5"]]></inline-find>
+					<inline-action type="replace-with"><![CDATA[colspan="6"]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[<td colspan="5"><b class="gensmall">{L_MODERATORS}</b></td>]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[colspan="5"]]></inline-find>
+					<inline-action type="replace-with"><![CDATA[colspan="6"]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[<td class="gen" align="center"><strong>{mod.USERNAME_FULL}</strong></td>]]></find>
+				<action type="before-add"><![CDATA[	<td class="gen" align="center"><a class="thumbnail" href="{mod.U_VIEW_PROFILE}"><span>{mod.USER_AVATAR}</span>{mod.USER_AVATAR_THUMB}</a></td>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<td class="row1" colspan="5" align="center"><span class="gen">{L_NO_MODERATORS}</span></td>]]></find>
+				<inline-edit>
+					<inline-find><![CDATA[colspan="5"]]></inline-find>
+					<inline-action type="replace-with"><![CDATA[colspan="6"]]></inline-action>
+				</inline-edit>
+			</edit>
+		</open>
+		<diy-instructions lang="en"><![CDATA[If your changes do not show up immediately, navigate to ACP > Styles > themes > prosilver > Click: Refresh]]></diy-instructions>
+	</action-group>
+</mod>

@@ -1,0 +1,11 @@
+Assunto: Notificação de novo comentário - "{IMAGE_NAME}"
+
+Olá {USERNAME},
+
+Você está recebendo esta notificação porque você está assistindo a imagem, "{IMAGE_NAME}" em "{SITENAME}". Esta imagem tem recebido um novo comentário desde sua última visita. Você pode usar o link abaixo para ler o comentário.
+
+{U_IMAGE}
+
+Se você não quiser mais assistir esta imagem / álbum que você pode clicar no botão "Subscribe imagem" link encontrado no link acima.
+
+{EMAIL_SIG}
