@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<form>
-	<params>
-		<param type="list" size="20" default="1" name="additionalfields" label="Fill additional fields" description="Fill the additional fields from the XML source (depends on webservice)">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-	</params>
-</form>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;PHP 5.6.25 (CLI) at localhost-config&apos; to &apos;Servers&apos;" description="Move &apos;PHP 5.6.25 (CLI) at localhost-config&apos; to &apos;Servers&apos;" destination="/Servers" element1="/Servers2/PHP 5.6.25 (CLI) at localhost-config" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1553130130768" updateReferences="true"/>
-</session>
